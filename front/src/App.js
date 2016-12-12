@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
+  getInfo(e){
+    axios.get('http://localhost:3000/api/hello')
+    .then((response) => {
+          console.log(response)
+      })
+    .catch((error) => {
+      alert('Sorry! Try again later')
+    });
+  }
+
   render() {
     return (
       <div className="App">
