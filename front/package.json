@@ -2,11 +2,12 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:4567/",
+  "proxy": "http://localhost:4567/",
   "devDependencies": {
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0"
