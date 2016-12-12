@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import api from './ApiCall.js'
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      apiCall: api(),
+    }
+  }
+
   getInfo(e){
-    axios.get('http://localhost:3000/api/hello')
+    axios.get(this.state.apiCall)
     .then((response) => {
       console.log(response)
       })
