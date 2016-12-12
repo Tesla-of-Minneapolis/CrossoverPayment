@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd782330-d145-47ed-a0b2-a921a8be4ed9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/Battery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/Model3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/ModelS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/ModelX.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ironyard/Tesla.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/Main.java" afterPath="$PROJECT_DIR$/src/com/ironyard/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -479,12 +471,19 @@
       <option name="project" value="LOCAL" />
       <updated>1481577273626</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pseudocode added to main()&#10;12/12 @ 4:30 p.m.:  added spark.post options">
+      <created>1481581708373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481581708373</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="147" y="0" width="1286" height="824" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -521,7 +520,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pseudocode added to main()" />
-    <option name="LAST_COMMIT_MESSAGE" value="pseudocode added to main()" />
+    <MESSAGE value="pseudocode added to main()&#10;12/12 @ 4:30 p.m.:  added spark.post options" />
+    <option name="LAST_COMMIT_MESSAGE" value="pseudocode added to main()&#10;12/12 @ 4:30 p.m.:  added spark.post options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
