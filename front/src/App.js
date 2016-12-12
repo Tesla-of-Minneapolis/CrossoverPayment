@@ -7,11 +7,15 @@ class App extends Component {
   getInfo(e){
     axios.get('http://localhost:3000/api/hello')
     .then((response) => {
-          console.log(response)
+      console.log(response)
       })
     .catch((error) => {
       alert('Sorry! Try again later')
     });
+  }
+
+  componentDidMount() {
+    this.getInfo()
   }
 
   render() {
