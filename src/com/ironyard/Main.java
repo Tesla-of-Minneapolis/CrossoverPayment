@@ -1,9 +1,14 @@
 package com.ironyard;
 
+
 import spark.Spark;
 import spark.template.mustache.MustacheTemplateEngine;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+
+    public static ArrayList<Tesla> cart = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -46,8 +51,7 @@ public class Main {
         User clicks "selection button" on specific car on the car page, they arrive at "/api/cart"
         Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price
          with a price total
-         ****ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)******
-         *ADD, REMOVE, CHANGE CART CAPABILITY*/
+         ****ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)******   */
         Spark.get(
                 "/api/cart",
                 ((request, response) -> {
@@ -64,6 +68,39 @@ public class Main {
                     return "confirmation";
                 })
         );//end "/api/confirmation"
+
+        Spark.post(
+                "/api/addProduct",
+                ((request, response) -> {
+                    String idString = request.queryParams("id");
+                    int id = Integer.parseInt(idString);
+
+                    Tesla x = new Tesla();
+                    cart.add(x);
+
+                    response.redirect("/");
+                    return "";
+                })
+        );//end Spark.post /api/addProduct
+
+        Spark.post(
+                "/api/removeProduct",
+                ((request, response) -> {
+                    String idString = request.queryParams("id");
+                    int id = Integer.parseInt(idString);
+
+                    Tesla tesla = cart.get(id);
+                    String removeProduct = request.queryParams("removeProduct");
+
+                    int x = Integer.parseInt(removeProduct);
+                    cart.remove(x -1);
+
+                    response.redirect("/");
+                    return "";
+                })
+        );//end Spark.post /api/removeProduct
+
+
 
 //        Spark.get(
 //                "/api/success",
