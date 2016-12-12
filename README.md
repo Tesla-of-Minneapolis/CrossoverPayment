@@ -6,7 +6,7 @@ Within the project, one is able to view the different models Tesla offers, as we
 
 ##Resources
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). User navigation is made possible by [React-Router](https://github.com/ReactTraining/react-router) It uses Spark for back end functionality. Information and photos are based on what is available at the [Tesla website](www.tesla.com). Tax information is pulled from [Avalera Tax Rates API](http://taxratesapi.avalara.com/).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). User navigation is made possible by [React-Router](https://github.com/ReactTraining/react-router) It uses [Spark](http://sparkjava.com/) as a back-end framework. Information and photos are based on what is available at the [Tesla website](www.tesla.com). Tax information is pulled from [Avalera Tax Rates API](http://taxratesapi.avalara.com/).
 
 ##Getting started
 
