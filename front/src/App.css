@@ -38,16 +38,21 @@ ul {
 .navDiv {
   background-color: black;
   justify-content: center;
+  position: fixed;
+  width: 100%;
 }
 
 .dealership {
-  width: 85%;
+  width: 100%;
 }
 
 .red {
   color: red;
-  text-decoration: underline;
   letter-spacing: 2px;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .homeCar {
@@ -95,6 +100,7 @@ ul {
 
 .hasText {
     display: flex;
+    margin-left: 3%;
   }
 
 .hasText p {
@@ -111,6 +117,15 @@ ul {
   .mobileCar {
     width: 408px;
     height: 234px;
+  }
+
+  .adjustMargin {
+    text-align: left;
+  }
+
+  .dealership {
+    width: 85%;
+    border-radius: 78px;
   }
 
 }
