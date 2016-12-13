@@ -38,6 +38,7 @@ public class Main {
 
         Spark.init();
 
+
         /* User clicks "see details" on Cars on the Home Page, they arrive at "/api/cars"
         Data to deliver: car data available for pull */
         Spark.get(
@@ -59,30 +60,8 @@ public class Main {
                     //return that JSON string
                     return json;
                 })
-        );
-<<<<<<< HEAD
-        //end "/api/products"
-=======
-        //end "/api/cars"
+        );//end Spark.get /api/products
 
-<<<<<<< HEAD
-        /* User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
-        Data to deliver: energy data available for pull  */
-        Spark.get(
-                "/api/energy",
-                ((request, response) -> {
-                    int id = Integer.valueOf(request.queryParams("id"));
-                    Energy powerWall = cart.get(id);
-                    cart.add(powerWall);
-                    return "energy";
-                }),
-                new MustacheTemplateEngine()
-        );//end "/api/energy"
-
-
->>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
-=======
->>>>>>> b76425b346972befd50a48e2a1ba13f844abc1fb
 
         /*  GILBERT:
         User clicks "selection button" on specific car on the car page, they arrive at "/api/cart"
