@@ -20,22 +20,22 @@
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
-li {
+.navItem {
   display: inline-block;
   padding: 5px;
   font-size: 15px;
 }
 
-li a {
+.navItem a {
   text-decoration: none;
   color: whitesmoke;
 }
 
 .navDiv {
   background-color: black;
-  display: flex;
   justify-content: center;
 }
 
@@ -44,13 +44,20 @@ li a {
   li {
     display: block;
     font-size: 28px;
+    min-width: 50px;
   }
-  .navDiv {
+
+  .nav {
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+
+  }
+
+  .navDiv {
     padding: 1rem;
-    padding-right: 2rem;
     max-width: 30%;
+    height: 100vh;
   }
 
   .contentContainer {
