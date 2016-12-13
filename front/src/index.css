@@ -1,10 +1,97 @@
-html, body {
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Gotham medium', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Gotham medium', sans-serif;
-  box-sizing: border-box;
 }
-
-/** {
-  border: 1px solid magenta;
-}*/
+* {
+  /*border: 2px solid red;*/
+}
+.container {
+  background-color: black;
+  height: 100vh;
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;;
+}
+.teslaname {
+  color: white;
+  height: 86px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+  width: 80%;
+}
+.teslaname img {
+  width: 100%;
+}
+.teslalogo {
+  height: 220px;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+h1 {
+  color: white;
+  display: inline-block;
+  font-size: 60px;
+  margin: 0 auto;
+  padding: 0;
+}
+.homelink {
+  border: 2px solid white;
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+@media (min-width: 450px) {
+  .container {
+    background-image: url('Images/landingpage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;;
+  }
+  .landing {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;;
+  }
+  .teslaname {
+    color: white;
+    height: 86px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+    width: 40%;
+  }
+  .teslalogo {
+    height: 110px;
+    margin: 0 auto;
+    padding: 0;
+    width: 10%;
+  }
+  h1 {
+    color: white;
+    display: inline-block;
+    font-size: 60px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .homelink {
+    border: 2px solid white;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+  }
+}
