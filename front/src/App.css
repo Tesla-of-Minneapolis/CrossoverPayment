@@ -21,6 +21,7 @@
 ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .navItem {
@@ -39,6 +40,23 @@ ul {
   justify-content: center;
 }
 
+.dealership {
+  width: 85%;
+}
+
+.red {
+  color: red;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.homeCar {
+  display: none;
+}
+
+.mobileCar {
+  width: 100%;
+}
 
 @media (min-width: 450px) {
   .navItem {
@@ -57,21 +75,42 @@ ul {
 
   .navDiv {
     padding: 1rem;
-    max-width: 30%;
+    width: 20%;
     height: 100vh;
+    position: fixed;
+
   }
 
   .contentContainer {
-    display: flex;
-    justify-content: center;
+    overflow-y: scroll;
+    left: 20%;
+    position: absolute;
+    display: block;
+    margin-left: 0;
   }
 
   .containingDiv {
     display: flex;
   }
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.hasText {
+    display: flex;
+  }
+
+.hasText p {
+    width: 45%;
+    margin: 5%;
+    font-size: 20px;
+  }
+  .homeCar {
+    display: inline-block;
+    width: 408px;
+    height: 234px;
+  }
+
+  .mobileCar {
+    width: 408px;
+    height: 234px;
+  }
+
 }
