@@ -94,4 +94,12 @@ h1 {
     text-decoration: none;
     width: 100px;
   }
+
+  .hasText {
+    display: flex;
+  }
+
+  .hasText p {
+    width: 45%;
+  }
 }
