@@ -1,43 +1,48 @@
 package com.ironyard;
 
-
+import jodd.json.JsonSerializer;
 import spark.Spark;
-import spark.template.mustache.MustacheTemplateEngine;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
+
 
     public static ArrayList<Tesla> cart = new ArrayList<>();
 
     public static void main(String[] args) {
 
+        //parse csv into an arraylist
+        ArrayList<Tesla> productList = new ArrayList<>();
+
         Spark.init();
 
-//        Spark.get(
-//                "/api/homePage",
-//                ((request, response) -> {
-//                    return "homePage";
-//                })
-//        );//end "/api/homePage"
-
-        /* DANNY:
-        User clicks "see details" on Cars on the Home Page, they arrive at "/api/cars"
-        Data to deliver: image, make, model, year, engine, exteriorColor, interiorColor, price ...
-        */
+        /* User clicks "see details" on Cars on the Home Page, they arrive at "/api/cars"
+        Data to deliver: car data available for pull */
         Spark.get(
                 "/api/cars",
-                ((request, response) -> {
-                    return "cars";
-                })
-        );//end "/api/cars"
 
-        /* RYAN:
-        User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
-        Data to deliver: size and image
-        also an option to go to "api/cart"
-        also an option to return to "api/cars"
-        */
+                ((request, response) -> {
+                    int id = Integer.valueOf(request.queryParams("id"));
+
+                    Tesla temp = new Tesla();
+
+                    for(Tesla t : productList){
+                        if(t.id == id){
+                            temp = t;
+                        }
+                    }
+                    
+                    //serialize temp into JSON string
+                    JsonSerializer serializer = new JsonSerializer();
+                    String json = serializer.include("*").serialize(temp);
+                    //return that JSON string
+                    return json;
+                })
+        );
+        //end "/api/cars"
+
+        /* User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
+        Data to deliver: energy data available for pull  */
         Spark.get(
                 "/api/energy",
                 ((request, response) -> {
@@ -83,6 +88,18 @@ public class Main {
                 })
         );//end Spark.post /api/addProduct
 
+//        Spark.get(
+//                "/api/cars",
+//
+//                ((request, response) -> {
+//                    int id = Integer.valueOf(request.queryParams("id"));
+//                    Tesla x = cart.get(id);
+//                    cart.add(x);
+//                    response.redirect("/");
+//                    return "";
+//                })
+//        );
+
         Spark.post(
                 "/api/removeProduct",
                 ((request, response) -> {
@@ -99,15 +116,6 @@ public class Main {
                     return "";
                 })
         );//end Spark.post /api/removeProduct
-
-
-
-//        Spark.get(
-//                "/api/success",
-//                ((request, response) -> {
-//                    return "success";
-//                })
-//        );//end "/api/success"
 
         Spark.get(
                 "/api/hello",
@@ -136,6 +144,8 @@ public class Main {
                    JsonSerializer serializer = new JsonSerializer();
                    String json = serializer.include("*").serialize(threads);
                    return json;
+
+
 
          EXAMPLE FOR PULLING TAX API
 
