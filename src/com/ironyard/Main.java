@@ -19,9 +19,12 @@ public class Main {
 
     //to store customer choices
     public static ArrayList<Tesla> cart = new ArrayList<>();
+    //to store cart data
+    public static HashMap<Integer, Integer> cartHashMap = new HashMap<>();
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        //to store site product information
         ArrayList<Tesla> productList = new ArrayList<>();
 
         //parse csv into an arraylist
@@ -43,7 +46,7 @@ public class Main {
 
         Spark.init();
 
-        /* User clicks "see details" on Cars on the Home Page, they arrive at "/api/products"
+        /* User clicks "see details" on the Home Page, they arrive at "/api/products"
         Data to deliver:  data available for pull */
         Spark.get(
                 "/api/products",
@@ -67,32 +70,11 @@ public class Main {
         );//end Spark.get /api/products
 
 
-        /*  GILBERT:
-        User clicks "selection button" on specific car on the car page, they arrive at "/api/cart"
-        Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price
-         with a price total
-         ****ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)******   */
-//        Spark.get(
-//                "/api/cart",
-//                ((request, response) -> {
-//                    String stringZipCode = request.queryParams("zipCode");
-//                    URL taxUrl = new URL("https://taxrates.api.avalara.com:443/postal?country=usa&postal=" + stringZipCode + "&apikey=iUrLhXV%2BczAz9D1bIw3DKkHehBBTZAjDySIQrNcCOQ9UwjJgt%2BWLDETEQSVsObY5q22uv6NZ46T5XsUxA5oJ%2Fw%3D%3D");
-//                    URLConnection uc = taxUrl.openConnection();
-//                    BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-//                    String inputLine = in.readLine();
-//
-//                    System.out.println(inputLine);
-//
-//                    JsonParser parser = new JsonParser();
-//                    TaxListing listing = parser.parse(inputLine, TaxListing.class);
-//                }),
-//        );
-
         Spark.post(
                 "/api/addProduct",
                 ((request, response) -> {
                     int id = Integer.valueOf(request.queryParams("id"));
-                    Tesla x = cart.get(id);
+                    Tesla x = productList.get(id);
                     cart.add(x);
 
                     response.redirect("/");
@@ -104,7 +86,7 @@ public class Main {
                 "/api/removeProduct",
                 ((request, response) -> {
                     int id = Integer.valueOf(request.queryParams("id"));
-                    Tesla x = cart.get(id);
+                    Tesla x = productList.get(id);
                     cart.remove(x);
 
                     response.redirect("/");
@@ -112,12 +94,46 @@ public class Main {
                 })
         );//end Spark.post /api/removeProduct
 
+        //testing purposes
         Spark.get(
                 "/api/hello",
                 ((request, response) -> {
                     return "Hello World!";
                 })
         );//end "/api/hello"
+
+
+        /*  User clicks "selection button" on specific car, they arrive at "/api/cart"
+        Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price with a price total
+         *ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)   */
+        Spark.get(
+                "/api/cart",
+                ((request, response) -> {
+
+                    String stringZipCode = request.queryParams("zipCode");
+                    double taxRate = Double.parseDouble(stringZipCode);
+
+                    String id = request.queryParams("id");
+
+                    double subtotal = Double.parseDouble(id);
+                    double tax = subtotal * taxRate;
+                    double total = tax + subtotal;
+
+                    URL taxUrl = new URL("https://taxrates.api.avalara.com:443/postal?country=usa&postal=" + stringZipCode +
+                            "&apikey=iUrLhXV%2BczAz9D1bIw3DKkHehBBTZAjDySIQrNcCOQ9UwjJgt%2BWLDETEQSVsObY5q22uv6NZ46T5XsUxA5oJ%2Fw%3D%3D");
+                    URLConnection uc = taxUrl.openConnection();
+                    BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+                    String inputLine = in.readLine();
+
+                    System.out.println(inputLine);
+
+                    JsonParser parser = new JsonParser();
+                    TaxListing listing = parser.parse(inputLine, TaxListing.class);
+                    JsonSerializer serializer = new JsonSerializer();
+                    String json = serializer.include("*").serialize(listing);
+                    return json;
+
+                }));//end /api/cart
 
     }//end main()
 
