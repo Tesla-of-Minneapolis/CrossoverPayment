@@ -31,19 +31,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+        <div className="containingDiv">
         <div className="navDiv">
           <ul className="nav">
             <li className="navItem"><Link to={'/home'}>Home</Link></li>
-            <li className="navItem"><Link to={'/battery'}>Chargers</Link></li>
             <li className="navItem"><Link to={'/cars'}>Cars</Link></li>
+            <li className="navItem"><Link to={'/battery'}>Energy</Link></li>
+            <li className="navItem"><Link to={'/cart'}>My Cart</Link></li>
+            <li className="navItem"><Link to={'/contact'}>Contact</Link></li>
           </ul>
         </div>
         <div>
           {this.props.children}
+        </div>
         </div>
       </div>
     );
