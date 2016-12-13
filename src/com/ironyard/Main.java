@@ -4,7 +4,6 @@ package com.ironyard;
 import spark.Spark;
 import spark.template.mustache.MustacheTemplateEngine;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
@@ -41,8 +40,12 @@ public class Main {
         Spark.get(
                 "/api/energy",
                 ((request, response) -> {
+                    int id = Integer.valueOf(request.queryParams("id"));
+                    Energy powerWall = cart.get(id);
+                    cart.add(powerWall);
                     return "energy";
-                })
+                }),
+                new MustacheTemplateEngine()
         );//end "/api/energy"
 
 
