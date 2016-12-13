@@ -5,6 +5,4 @@ package com.ironyard;
  */
 public class Battery {
 
-    int size;
-    int id;
 }
