@@ -14,14 +14,14 @@ export default class CartPage extends Component {
 
       },
       {
-        id: 0,
+        id: 1,
         img:'',
         model: 'Model S',
         year: 2012,
         battery: '60 kWh'
       },
       {
-        id: 0,
+        id: 2,
         img:'',
         model: 'Powerwall',
         year: 2018,
