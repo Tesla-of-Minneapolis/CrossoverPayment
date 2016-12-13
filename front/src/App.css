@@ -41,10 +41,11 @@ ul {
 
 
 @media (min-width: 450px) {
-  li {
+  .navItem {
     display: block;
-    font-size: 28px;
+    font-size: 36px;
     min-width: 50px;
+    padding: 20px 0;
   }
 
   .nav {
