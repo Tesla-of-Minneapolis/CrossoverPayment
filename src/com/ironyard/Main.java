@@ -60,7 +60,26 @@ public class Main {
                     return json;
                 })
         );
+<<<<<<< HEAD
         //end "/api/products"
+=======
+        //end "/api/cars"
+
+        /* User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
+        Data to deliver: energy data available for pull  */
+        Spark.get(
+                "/api/energy",
+                ((request, response) -> {
+                    int id = Integer.valueOf(request.queryParams("id"));
+                    Energy powerWall = cart.get(id);
+                    cart.add(powerWall);
+                    return "energy";
+                }),
+                new MustacheTemplateEngine()
+        );//end "/api/energy"
+
+
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
 
         /*  GILBERT:
         User clicks "selection button" on specific car on the car page, they arrive at "/api/cart"

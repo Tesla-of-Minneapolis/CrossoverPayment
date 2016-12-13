@@ -7,11 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd782330-d145-47ed-a0b2-a921a8be4ed9" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CrossoverPayment/templates/home.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/Main.java" afterPath="$PROJECT_DIR$/src/com/ironyard/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" afterPath="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/Tesla.java" afterPath="$PROJECT_DIR$/src/com/ironyard/Tesla.java" />
+=======
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/ironyard/Battery.java" afterPath="$PROJECT_DIR$/src/com/ironyard/Energy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/Main.java" afterPath="$PROJECT_DIR$/src/com/ironyard/Main.java" />
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" afterPath="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
+=======
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,12 +40,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ironyard/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="263">
               <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+            <state relative-caret-position="315">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
             </state>
           </provider>
         </entry>
@@ -43,8 +66,50 @@
       <file leaf-file-name="Tesla.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tesla.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="465">
               <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+            <state relative-caret-position="195">
+<<<<<<< HEAD
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+=======
+              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding>
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ironyard/Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelX.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelX.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
               <folding />
             </state>
           </provider>
@@ -53,6 +118,7 @@
       <file leaf-file-name="Tax.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tax.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="645">
               <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
               <folding>
@@ -69,10 +135,21 @@
                 <element signature="e#653#654#0" expanded="true" />
                 <element signature="e#685#686#0" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+            <state relative-caret-position="375">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+              <folding />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TaxListing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ironyard/TaxListing.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,15 +165,38 @@
                 <element signature="e#477#478#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Energy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ironyard/Energy.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="180">
+              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+=======
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+              <folding />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RawCarData.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RawCarData.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ironyard/RawCarData.csv">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="150">
               <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="150">
+              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
               <folding />
             </state>
           </provider>
@@ -129,25 +229,54 @@
       <list>
         <option value="$PROJECT_DIR$/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/com/ironyard/Cars.java" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/com/ironyard/ModelX.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/ModelS.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/Model3.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/Tesla.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/Cart.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/Battery.java" />
+=======
+        <option value="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
         <option value="$PROJECT_DIR$/src/com/ironyard/Cart.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/Battery.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/Car.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/ModelX.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/ModelS.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/Model3.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/ironyard/Tesla.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/Tax.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/TaxListing.java" />
         <option value="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
+=======
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
         <option value="$PROJECT_DIR$/src/com/ironyard/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/ironyard/RawCarData.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="-5" />
     <option name="y" value="42" />
     <option name="width" value="1439" />
     <option name="height" value="762" />
+=======
+<<<<<<< HEAD
+    <option name="x" value="653" />
+    <option name="y" value="132" />
+=======
+    <option name="x" value="29" />
+    <option name="y" value="27" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+    <option name="width" value="1286" />
+    <option name="height" value="824" />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,8 +294,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+=======
       <pane id="PackagesPane" />
       <pane id="Scope" />
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -213,7 +351,14 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,6 +369,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21609196" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -483,7 +629,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-5" y="42" width="1439" height="762" extended-state="0" />
+=======
+<<<<<<< HEAD
+    <frame x="653" y="132" width="1286" height="824" extended-state="0" />
+=======
+    <frame x="29" y="27" width="1286" height="824" extended-state="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,7 +655,15 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20329277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22508039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22508039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -515,6 +677,36 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286119" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22508039" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -607,9 +799,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tesla.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="195">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+=======
         <state relative-caret-position="390">
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+          </folding>
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
         </state>
       </provider>
     </entry>
@@ -631,8 +836,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Model3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Energy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -648,7 +861,25 @@
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/RawCarData.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="66" lean-forward="true" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tesla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -678,26 +909,102 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelS.java">
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Model3.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Model3.java">
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Model3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Energy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Battery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/RawCarData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="66" lean-forward="true" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/.gitkeep.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Cart.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Model3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/Energy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+=======
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Car.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="17" />
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
           <folding />
         </state>
       </provider>
@@ -737,8 +1044,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tax.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="645">
           <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+        <state relative-caret-position="315">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+>>>>>>> 9bb6c52da9fc86e3202cc30e4587dbb0d79b11dc
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
           <folding>
             <element signature="e#326#327#0" expanded="true" />
             <element signature="e#353#354#0" expanded="true" />
@@ -758,16 +1075,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Tesla.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="465">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+=======
+        <state relative-caret-position="195">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/ironyard/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/ModelS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ironyard/RawCarData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+>>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
           <folding />
         </state>
       </provider>
