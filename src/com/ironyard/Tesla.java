@@ -8,13 +8,26 @@ public class Tesla {
 
     //variable
     int id;
+    String image;
+    String model;
+    int year;
+    String engine;
+    String exteriorColor;
+    String interiorColor;
+    Double price;
 
-    //constructor
-    public Tesla (int id){
+
+    public Tesla(int id, String image, String model, int year, String engine, String exteriorColor, String interiorColor, Double price) {
         this.id = id;
+        this.image = image;
+        this.model = model;
+        this.year = year;
+        this.engine = engine;
+        this.exteriorColor = exteriorColor;
+        this.interiorColor = interiorColor;
+        this.price = price;
     }
 
-    //default constructor
     public Tesla (){
 
     }
