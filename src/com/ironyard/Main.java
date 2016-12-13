@@ -26,7 +26,7 @@ public class Main {
 
                     Tesla temp = new Tesla();
 
-                    for(Tesla t : productList){
+                    for(Tesla t : cart){
                         if(t.id == id){
                             temp = t;
                         }
@@ -40,20 +40,6 @@ public class Main {
                 })
         );
         //end "/api/cars"
-
-        /* User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
-        Data to deliver: energy data available for pull  */
-        Spark.get(
-                "/api/energy",
-                ((request, response) -> {
-                    int id = Integer.valueOf(request.queryParams("id"));
-                    Energy powerWall = cart.get(id);
-                    cart.add(powerWall);
-                    return "energy";
-                }),
-                new MustacheTemplateEngine()
-        );//end "/api/energy"
-
 
 
         /*  GILBERT:

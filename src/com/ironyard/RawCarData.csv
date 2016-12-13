@@ -1,11 +1,11 @@
-id, make, model, year, engine, exteriorColor, interiorColor, price
-1,Tesla,Model 3,2017,60,White,Basic Black,35000.00
-2,Tesla,Model 3,2017,60D,Black,Premium Tan,50500.00
-3,Tesla,Model 3,2017,75D,Red,Premium Black,65500.00
-4,Tesla,Model S,2017,75D,White,Basic Black,85500.00
-5,Tesla,Model S,2017,P90D,Black,Premium Tan,95500.00
-6,Tesla,Model S,2017,P100D,Red,Premium Black,134500.00
-7,Tesla,Model X,2017,75D,White,Basic Black,88800
-8,Tesla,Model X,2017,90D,Black,Premium Tan,98800.00
-9,Tesla,Model X,2017,P100D,Red,Premium Black,138800.00
-10,Tesla,Powerwall 2,0,null,white,null,5500.00
+id,image,model,year,battery,exteriorColor,interiorColor,price
+1,model3bas.jpg,Model 3,2017,60 kWh,White,Basic Black,35000.00
+2,model3lux.jpg,Model 3,2017,75 kWh,Black,Premium Tan,50500.00
+3,model3exo.jpg,Model 3,2017,90 kWh,Red,Premium Black,65500.00
+4,modelSbas.jpg,Model S,2017,75 kWh,White,Basic Black,85500.00
+5,modelSlux.jpg,Model S,2017,90 kWh,Black,Premium Tan,95500.00
+6,modelSexo.jpg,Model S,2017,100 kWh,Red,Premium Black,134500.00
+7,modelXbas.jpg,Model X,2017,75 kWh,White,Basic Black,88800.00
+8,modelXlux.jpg,Model X,2017,90 kWh,Black,Premium Tan,98800.00
+9,modelXexo.jpg,Model X,2017,P100D,Red,Premium Black,138800.00
+10,powerwall.jpg,Powerwall 2,0,14 kWh,white,null,5500.00
