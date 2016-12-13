@@ -18,6 +18,51 @@
   font-size: large;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.navDiv {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (min-width: 450px) {
+  li {
+    display: block;
+    font-size: 28px;
+  }
+  .navDiv {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    padding-right: 2rem;
+    max-width: 30%;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .containingDiv {
+    display: flex;
+  }
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
