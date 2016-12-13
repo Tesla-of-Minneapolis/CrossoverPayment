@@ -52,22 +52,33 @@ public class Main {
                 "/api/products",
 
                 ((request, response) -> {
-                    int id = Integer.valueOf(request.queryParams("id"));
+                    String id = request.queryParams("id");
 
-                    Tesla temp = new Tesla();
+                    if(id != null){
+                        Tesla temp = new Tesla();
+                        int x = Integer.parseInt(id);
 
-                    for(Tesla t : productList){
-                        if(t.id == id){
-                            temp = t;
+                        for(Tesla t : productList){
+                            if(t.id == x){
+                                temp = t;
+                            }
+                            //serialize temp into JSON string
+                            JsonSerializer serializer = new JsonSerializer();
+                            String json = serializer.include("*").serialize(temp);
+                            //return that JSON string
+                            return json;
                         }
                     }
-                    //serialize temp into JSON string
-                    JsonSerializer serializer = new JsonSerializer();
-                    String json = serializer.include("*").serialize(temp);
-                    //return that JSON string
-                    return json;
+
+                        //serialize temp into JSON string
+                        JsonSerializer serializer = new JsonSerializer();
+                        String json = serializer.include("*").serialize(productList);
+                        //return that JSON string
+                        return json;
                 })
         );//end Spark.get /api/products
+
+
 
 
         Spark.post(
