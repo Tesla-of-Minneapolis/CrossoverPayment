@@ -65,6 +65,7 @@ public class Main {
 =======
         //end "/api/cars"
 
+<<<<<<< HEAD
         /* User clicks "see details" on Energy on the Home Page, they arrive at "/api/energy"
         Data to deliver: energy data available for pull  */
         Spark.get(
@@ -80,6 +81,8 @@ public class Main {
 
 
 >>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
+=======
+>>>>>>> b76425b346972befd50a48e2a1ba13f844abc1fb
 
         /*  GILBERT:
         User clicks "selection button" on specific car on the car page, they arrive at "/api/cart"

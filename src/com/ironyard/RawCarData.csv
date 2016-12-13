@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b76425b346972befd50a48e2a1ba13f844abc1fb
 id,image,model,year,battery,exteriorColor,interiorColor,price
 1,model3bas.jpg,Model 3,2017,60 kWh,White,Basic Black,35000.00
 2,model3lux.jpg,Model 3,2017,75 kWh,Black,Premium Tan,50500.00
@@ -9,6 +12,7 @@ id,image,model,year,battery,exteriorColor,interiorColor,price
 7,modelXbas.jpg,Model X,2017,75 kWh,White,Basic Black,88800.00
 8,modelXlux.jpg,Model X,2017,90 kWh,Black,Premium Tan,98800.00
 9,modelXexo.jpg,Model X,2017,P100D,Red,Premium Black,138800.00
+<<<<<<< HEAD
 10,powerwall.jpg,Powerwall 2,0,14 kWh,white,null,5500.00
 =======
 id, make, model, year, engine, exteriorColor, interiorColor, price
@@ -23,3 +27,6 @@ id, make, model, year, engine, exteriorColor, interiorColor, price
 9,Tesla,Model X,2017,P100D,Red,Premium Black,138800.00
 10,Tesla,Powerwall 2,0,null,white,null,5500.00
 >>>>>>> c1ce9a2a2061ecb2a4f490aab7f689366634428c
+=======
+10,powerwall.jpg,Powerwall 2,0,14 kWh,white,null,5500.00
+>>>>>>> b76425b346972befd50a48e2a1ba13f844abc1fb
