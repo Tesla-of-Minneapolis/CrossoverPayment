@@ -10,6 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ##Getting started
 
+OR. . .
+
 1. Clone this repository to your computer
 
 2. In the command line, navigate into CrossoverPayment. Run `java -jar CrossoverPayment`

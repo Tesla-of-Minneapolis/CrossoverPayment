@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Link} from 'react-router';
 import axios from 'axios';
-import api from './ApiCall.js'
+import api from './ApiCall.js';
+
 
 class App extends Component {
   constructor(props){
@@ -33,9 +35,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="navDiv">
+          <ul className="nav">
+            <li className="navItem"><Link to={'/home'}>Home</Link></li>
+            <li className="navItem"><Link to={'/battery'}>Chargers</Link></li>
+            <li className="navItem"><Link to={'/cars'}>Cars</Link></li>
+          </ul>
+        </div>
+        <div>
+          {this.props.children}
+        </div>
       </div>
     );
   }
