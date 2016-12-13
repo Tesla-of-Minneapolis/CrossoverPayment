@@ -12,11 +12,12 @@ import ConfirmPage from './ConfirmPage';
 import SuccessPage from './SuccessPage';
 import BatteryPage from './BatteryPage';
 import NoMatch from './NoMatch';
+import ContactPage from './ContactPage';
 
 ReactDOM.render(
   <Router history={browserHistory}>
+    <Route path="/" component={LandingPage}/>
     <Route path="/" component={App} >,
-      <IndexRoute component={LandingPage} />
       <Route path="/home" component={HomePage}/>
       <Route path="/cars" component={CarsPage}/>
       <Route path="/car" component={SingleCar}/>
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path="/confirm" component={ConfirmPage}/>
       <Route path="/success" component={SuccessPage}/>
       <Route path="/battery" component={BatteryPage}/>
+      <Route path="/contact" component={ContactPage}/>
 
       <Route path="*" component={NoMatch} />
     </Route>
