@@ -22,6 +22,8 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        ArrayList<Tesla> productList = new ArrayList<>();
+
         //parse csv into an arraylist
         File f = new File ("RawCarData.csv");
         Scanner csvRead = new Scanner (f);
@@ -35,8 +37,6 @@ public class Main {
                     variables[1], variables[2], Integer.parseInt(variables[3]), variables[4],
                     variables[5], variables[6], Double.parseDouble(variables[7]));
 
-            //each customer's product(s)
-            ArrayList<Tesla> productList = new ArrayList<>();
             productList.add(tesla);
         }//end while loop to parse raw data
 
@@ -53,7 +53,7 @@ public class Main {
 
                     Tesla temp = new Tesla();
 
-                    for(Tesla t : cart){
+                    for(Tesla t : productList){
                         if(t.id == id){
                             temp = t;
                         }
