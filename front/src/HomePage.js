@@ -25,8 +25,8 @@ export default class HomePage extends Component {
             </div>
             <div className="hasText">
             <p><h2 className="red adjustMargin"> Beauty. <br/> Power. <br/> Sustainability.</h2></p>
-            <p><Link className="homelink" to={"/cars"}>Cars</Link></p>
             </div>
+            <Link className="carlistlink" to={"/cars"}> Cars </Link>
           </div>
         );
       }
