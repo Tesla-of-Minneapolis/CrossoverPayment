@@ -17,9 +17,12 @@ import java.util.Scanner;
 
 public class Main {
 
+    //to store customer choices
     public static ArrayList<Tesla> cart = new ArrayList<>();
 
     public static void main(String[] args) throws FileNotFoundException {
+
+        ArrayList<Tesla> productList = new ArrayList<>();
 
         //parse csv into an arraylist
         File f = new File ("RawCarData.csv");
@@ -28,19 +31,20 @@ public class Main {
         while (csvRead.hasNext()){
             String teslaFile = csvRead.nextLine();
             String [] variables = teslaFile.split(",");
+
+            //constructor for product
             Tesla tesla = new Tesla (Integer.parseInt(variables[0]),
                     variables[1], variables[2], Integer.parseInt(variables[3]), variables[4],
                     variables[5], variables[6], Double.parseDouble(variables[7]));
-            ArrayList<Tesla> productList = new ArrayList<>();
+
             productList.add(tesla);
-        }//end whle loop
+        }//end while loop to parse raw data
 
 
         Spark.init();
 
-
-        /* User clicks "see details" on Cars on the Home Page, they arrive at "/api/cars"
-        Data to deliver: car data available for pull */
+        /* User clicks "see details" on Cars on the Home Page, they arrive at "/api/products"
+        Data to deliver:  data available for pull */
         Spark.get(
                 "/api/products",
 
@@ -49,7 +53,7 @@ public class Main {
 
                     Tesla temp = new Tesla();
 
-                    for(Tesla t : cart){
+                    for(Tesla t : productList){
                         if(t.id == id){
                             temp = t;
                         }
@@ -81,26 +85,8 @@ public class Main {
 //
 //                    JsonParser parser = new JsonParser();
 //                    TaxListing listing = parser.parse(inputLine, TaxListing.class);
-//
-//                    HashMap m = new HashMap();
-//                    m.put("zipCode", stringZipCode);
-//                    m.put("rates", listing.getRates());
-//                    return new ModelAndView(m, );
-//
 //                }),
-//                new MustacheTemplateEngine()
 //        );
-
-
-        /*  User enters zip code AND clicks "buy now" on cart page, they arrive at "/api/confirmation"
-        Data to deliver:  Review summary
-         */
-        Spark.get(
-                "/api/confirmation",
-                ((request, response) -> {
-                    return "confirmation";
-                })
-        );//end "/api/confirmation"
 
         Spark.post(
                 "/api/addProduct",
@@ -132,58 +118,6 @@ public class Main {
                     return "Hello World!";
                 })
         );//end "/api/hello"
-
-
-        /*  EXAMPLE CODE FOR JSON FILES **********
-        Spark.get(
-               "/json",
-               ((request, response) -> {
-                   String replyId = request.queryParams("replyId");
-                   int replyIdNum = -1;
-                   if (replyId != null) {
-                       replyIdNum = Integer.parseInt(replyId);
-                   }
-
-                   ArrayList<Message> threads = new ArrayList<>();
-                   for (Message message : messages) {
-                       if (message.replyId == replyIdNum) {
-                           threads.add(message);
-                       }
-                   }
-                   JsonSerializer serializer = new JsonSerializer();
-                   String json = serializer.include("*").serialize(threads);
-                   return json;
-
-
-
-         EXAMPLE FOR PULLING TAX API
-
-         Spark.get(
-               "/holiday",
-               ((request, response) -> {
-                   String year = request.queryParams("year");
-                   String month = request.queryParams("month");
-                   URL holidayUrl = new URL("https://holidayapi.com/v1/holidays?key=8a7a3b21-37f9-49c8-9e72-fc9a6f72eedb&country=US&year=" + year + "&month=" + month);
-                   URLConnection uc = holidayUrl.openConnection();
-                   BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-                   String inputLine = in.readLine();
-
-
-                   System.out.println(inputLine);
-
-                   JsonParser parser = new JsonParser();
-                   HolidayListing listing = parser.parse(inputLine, HolidayListing.class);
-
-
-                   HashMap m = new HashMap();
-                   m.put("month", month);
-                   m.put("year", year);
-                   m.put("holidays", listing.getHolidays());
-                   return new ModelAndView(m, "holiday.html");
-               }),
-               new MustacheTemplateEngine()
-       );
-         */
 
     }//end main()
 
