@@ -31,7 +31,7 @@ public class Main {
                             temp = t;
                         }
                     }
-                    
+
                     //serialize temp into JSON string
                     JsonSerializer serializer = new JsonSerializer();
                     String json = serializer.include("*").serialize(temp);
