@@ -84,9 +84,13 @@ export default class CartPage extends Component {
 
     onToggle(e) {
       e.preventDefault();
+      if (this.state.newZIPValue.length === 5) {
       this.setState({
         showToggleOnZip: true
       })
+    } else {
+      alert("Please enter a 5-digit ZIP code")
+    }
     }
 
       render() {
