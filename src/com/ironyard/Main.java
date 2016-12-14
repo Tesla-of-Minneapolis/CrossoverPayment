@@ -21,7 +21,6 @@ public class Main {
     //to store site inventory
     public static ArrayList<Tesla> productList = new ArrayList<>();
 
-
     public static void main(String[] args) throws FileNotFoundException {
 
         //parse csv into an arraylist
@@ -42,8 +41,7 @@ public class Main {
 
         Spark.init();
 
-        /* User clicks "see details" on the Home Page, they arrive at "/api/products"
-        Data to deliver:  data available for pull */
+        /* Product data available for pull */
         Spark.get(
                 "/api/products",
 
@@ -76,6 +74,7 @@ public class Main {
                 })
         );//end Spark.get /api/products
 
+        //add product from product list to cart
         Spark.post(
                 "/api/addProduct",
                 ((request, response) -> {
@@ -89,6 +88,7 @@ public class Main {
                 })
         );//end Spark.post /api/addProduct
 
+        //remove product from cart
         Spark.post(
                 "/api/removeProduct",
                 ((request, response) -> {
@@ -99,6 +99,7 @@ public class Main {
                 })
         );//end Spark.post /api/removeProduct
 
+        //change quantity in cart
         Spark.post(
                 "/api/adjustQuantity",
                 ((request, response) -> {
@@ -114,6 +115,7 @@ public class Main {
                 })
         );//end Spark.post api/adjustQuantity
 
+        //product(s) selected from product list
         Spark.get(
                 "/api/cart",
                 ((request, response) -> {
@@ -131,23 +133,12 @@ public class Main {
                 })
         );//end "/api/hello"
 
-
-        /*  User clicks "selection button" on specific car, they arrive at "/api/cart"
-        Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price with a price total
-         *ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)   */
+         /* zip code entry from user determines sales tax   */
         Spark.get(
                 "/api/tax",
                 ((request, response) -> {
 
                     String stringZipCode = request.queryParams("zipCode");
-
-                   /* double taxRate = Double.parseDouble(stringZipCode);
-
-                    String id = request.queryParams("id");
-
-                    double subtotal = Double.parseDouble(id);
-                    double tax = subtotal * taxRate;
-                    double total = tax + subtotal; */
 
                    double total = 0;
 
