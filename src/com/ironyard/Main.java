@@ -16,16 +16,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    //to store customer choices
-//    public static ArrayList<Tesla> cart = new ArrayList<>();
     //to store cart data
     public static HashMap<Integer, Integer> cartHashMap = new HashMap<>();
+    //to store site inventory
     public static ArrayList<Tesla> productList = new ArrayList<>();
 
 
     public static void main(String[] args) throws FileNotFoundException {
-
-        //to store site product information
 
         //parse csv into an arraylist
         File f = new File ("RawCarData.csv");
@@ -117,7 +114,7 @@ public class Main {
                     response.redirect("/");
                     return "";
                 })
-        );
+        );//end Spark.post api/adjustQuantity
 
         //testing purposes
         Spark.get(
