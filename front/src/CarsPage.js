@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import api from './ApiCall.js';
 import axios from 'axios';
 import getCarImages from './carimages.js'
-import {Link} from 'react-router';
+import {Link, browserHistory} from 'react-router';
 
 
 
@@ -11,7 +11,6 @@ export default class CarsPage extends Component {
     super(props);
     this.state={
       inventory: [],
-      apiCall: api()
       // engine:'',
       // exteriorColor:'',
       // id: 0,
@@ -43,8 +42,9 @@ getInitialData() {
 }
 
 addToCart(car, e) {
-      axios.post(api() + '/api/addProduct', {id:car.id}).then((added) => {
-        // tell the router to redirect to the cart page
+      axios.post(api() + '/api/addProduct?id=' + car.id).then((added) => {
+      //   // tell the router to redirect to the cart page
+        browserHistory.push('/cart');
       })
     }
 
