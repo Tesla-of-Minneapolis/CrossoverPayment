@@ -43,7 +43,6 @@ public class Main {
             productList.add(tesla);
         }//end while loop to parse raw data
 
-
         Spark.init();
 
         /* User clicks "see details" on the Home Page, they arrive at "/api/products"
@@ -54,6 +53,7 @@ public class Main {
                 ((request, response) -> {
                     String id = request.queryParams("id");
 
+                    //if a certain product is selected, push that product info
                     if(id != null){
                         Tesla temp = new Tesla();
                         int x = Integer.parseInt(id);
@@ -69,6 +69,7 @@ public class Main {
                             return json;
                         }
                     }
+                    //if selection is "null," the push all product info
 
                         //serialize temp into JSON string
                         JsonSerializer serializer = new JsonSerializer();
@@ -77,9 +78,6 @@ public class Main {
                         return json;
                 })
         );//end Spark.get /api/products
-
-
-
 
         Spark.post(
                 "/api/addProduct",
@@ -118,7 +116,7 @@ public class Main {
         Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price with a price total
          *ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)   */
         Spark.get(
-                "/api/cart",
+                "/api/tax",
                 ((request, response) -> {
 
                     String stringZipCode = request.queryParams("zipCode");
@@ -134,17 +132,18 @@ public class Main {
                             "&apikey=iUrLhXV%2BczAz9D1bIw3DKkHehBBTZAjDySIQrNcCOQ9UwjJgt%2BWLDETEQSVsObY5q22uv6NZ46T5XsUxA5oJ%2Fw%3D%3D");
                     URLConnection uc = taxUrl.openConnection();
                     BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-                    String inputLine = in.readLine();
-
-                    System.out.println(inputLine);
+                    StringBuilder sb = new StringBuilder();
+                    while(in.ready()){
+                        sb.append(in.readLine());
+                    }
 
                     JsonParser parser = new JsonParser();
-                    TaxListing listing = parser.parse(inputLine, TaxListing.class);
+                    TaxListing listing = parser.parse(sb.toString(), TaxListing.class);
                     JsonSerializer serializer = new JsonSerializer();
                     String json = serializer.include("*").serialize(listing);
                     return json;
 
-                }));//end /api/cart
+                }));//end /api/tax
 
     }//end main()
 
