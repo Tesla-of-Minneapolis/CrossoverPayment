@@ -164,24 +164,16 @@ public class Main {
                             "&apikey=iUrLhXV%2BczAz9D1bIw3DKkHehBBTZAjDySIQrNcCOQ9UwjJgt%2BWLDETEQSVsObY5q22uv6NZ46T5XsUxA5oJ%2Fw%3D%3D");
                     URLConnection uc = taxUrl.openConnection();
                     BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-<<<<<<< HEAD
-                    StringBuilder sb = new StringBuilder();
-                    while(in.ready()){
-=======
 
                     StringBuilder sb = new StringBuilder();
                     while(in.ready()) {
->>>>>>> 0b1b2e66f3840aab561fe09e187c8aa58b2d78d8
                         sb.append(in.readLine());
                     }
 
                     JsonParser parser = new JsonParser();
                     TaxListing listing = parser.parse(sb.toString(), TaxListing.class);
-<<<<<<< HEAD
-=======
                     listing.setTotalRate(total);
 
->>>>>>> 0b1b2e66f3840aab561fe09e187c8aa58b2d78d8
                     JsonSerializer serializer = new JsonSerializer();
                     String json = serializer.include("*").serialize(listing);
                     return json;
