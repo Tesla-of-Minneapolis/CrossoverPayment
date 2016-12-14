@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Link} from 'react-router';
 import axios from 'axios';
 import api from './ApiCall.js';
+import navlogo from './Images/navlogo.jpg';
 
 
 class App extends Component {
@@ -17,7 +17,6 @@ class App extends Component {
   getInfo(e){
     axios.get(this.state.apiCall)
     .then((response) => {
-      console.log(response)
       })
     .catch((error) => {
       alert('Sorry! Try again later')
@@ -34,6 +33,7 @@ class App extends Component {
         <div className="containingDiv">
         <div className="navDiv">
           <ul className="nav">
+            <img className="navlogo" role="presentation" src={navlogo} />
             <li className="navItem"><Link to={'/home'}>Home</Link></li>
             <li className="navItem"><Link to={'/cars'}>Cars</Link></li>
             <li className="navItem"><Link to={'/battery'}>Energy</Link></li>

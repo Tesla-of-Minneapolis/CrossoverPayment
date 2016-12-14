@@ -6,44 +6,61 @@ import axios from 'axios';
 export default class CarsPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      engine: '',
-      exteriorColor: '',
-      id: '',
-      image: '',
-      interiorColor: '',
-      model: '',
-      price: '',
-      year: '',
+    this.state={
+      inventory: [],
       apiCall: api()
-    };
+      // engine:'',
+      // exteriorColor:'',
+      // id: 0,
+      // image:'',
+      // interiorColor: '',
+      // model: '',
+      // price: 0,
+      // year: 0,
   }
+}
 
-  componentDidMount() {
-    this.getInitialData()
-  }
+componentDidMount() {
+  this.getInitialData()
+}
 
-  getInitialData() {
-    let inventory;
-    axios.get('/api/products').then((response) => {
-      inventory = response.data
-      this.setState({inventory})
-      console.log(inventory)
+getInitialData() {
+  axios.get(api() + '/api/products')
+  .then((response) => {
+    let newInventory = response.data;
+    console.log(newInventory);
+    this.setState({
+      inventory: newInventory,
     })
-  }
-
-
-
+  })
+  .catch(function (error) {
+        console.log(error);
+      });
+}
       render() {
+
         return (
-          <div>
-            {/* <ul>
+          <div className="carsContainer">
+            <h5> Find the right Fit </h5>
+            <ul className="allCars">
               {this.state.inventory.map((car) => {
                 return (
-                  <li className='carEngine' key={car.id}>{car.engine}</li>
-                )
-              })}
-            </ul> */}
+                <li className={car.model} key={car.id}>
+                  <div className="productImage">
+                      <img alt='Product' src={car.image}/>
+                </div>
+                <div className="productInfo">
+                  <p className='name'>{car.name}</p>
+                  <p className='model'>{'Model: ' + car.model}</p>
+                  <p className='price'>{'Price: ' + car.price}</p>
+                  <p className='description'>{car.description}</p>
+                  <div className='itemDetails'>
+                </div>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
           </div>
         );
       }
