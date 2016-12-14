@@ -123,6 +123,7 @@
 
 .liContainerDiv {
   display: flex;
+  margin-top: 5%;
 }
 
 .leftDiv {
@@ -145,6 +146,20 @@
 .listImage {
   height: 100px;
   width: 100%;
+}
+
+.buyDiv {
+
+}
+
+.buyDiv a {
+  text-decoration: none;
+  color: red;
+}
+
+.buyDiv h2 {
+  padding: 5px;
+  border: 2px solid black;
 }
 
 @media (min-width: 680px) {

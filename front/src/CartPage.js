@@ -100,7 +100,7 @@ export default class CartPage extends Component {
             <div> Tax: <br />
                   Total:
             </div>
-            <div>
+            <div className="buyDiv">
               <Link to={"/success"}><h2>BUY NOW</h2></Link>
             </div>
         </div>
