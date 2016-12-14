@@ -80,11 +80,11 @@ public class Main {
                 "/api/addProduct",
                 ((request, response) -> {
 
-                    int id = Integer.valueOf(request.queryParams("id"));
+                    String id = request.queryParams("id");
+                    int idId = Integer.parseInt(id);
 
-                    cartHashMap.put(id,1);
+                    cartHashMap.put(idId,1);
 
-                    response.redirect("/");
                     return "";
                 })
         );//end Spark.post /api/addProduct
@@ -95,7 +95,6 @@ public class Main {
                     int id = Integer.valueOf(request.queryParams("id"));
                     cartHashMap.remove(id);
 
-                    response.redirect("/");
                     return "";
                 })
         );//end Spark.post /api/removeProduct
@@ -111,7 +110,6 @@ public class Main {
                     cartHashMap.remove(id);
                     cartHashMap.put(id,quantity);
 
-                    response.redirect("/");
                     return "";
                 })
         );//end Spark.post api/adjustQuantity
