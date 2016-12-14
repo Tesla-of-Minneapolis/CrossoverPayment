@@ -56,14 +56,14 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;;
+    height: 100vh;
   }
   .landing {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;;
+    width: 100%;
   }
   .teslaname {
     color: white;
@@ -93,13 +93,5 @@ h1 {
     text-align: center;
     text-decoration: none;
     width: 100px;
-  }
-
-  .hasText {
-    display: flex;
-  }
-
-  .hasText p {
-    width: 45%;
   }
 }

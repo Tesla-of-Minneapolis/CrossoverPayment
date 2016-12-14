@@ -14,6 +14,8 @@ import BatteryPage from './BatteryPage';
 import NoMatch from './NoMatch';
 import ContactPage from './ContactPage';
 
+let inventory = [];
+
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={LandingPage}/>

@@ -17,7 +17,6 @@ class App extends Component {
   getInfo(e){
     axios.get(this.state.apiCall)
     .then((response) => {
-      console.log(response)
       })
     .catch((error) => {
       alert('Sorry! Try again later')

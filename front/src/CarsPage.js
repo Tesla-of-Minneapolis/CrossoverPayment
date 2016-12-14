@@ -15,17 +15,18 @@ export default class CarsPage extends Component {
       model: '',
       price: '',
       year: '',
-      apiCall: api()
+      apiCall: api(),
     };
   }
 
   componentDidMount() {
     this.getInitialData()
+    console.log(api())
   }
 
   getInitialData() {
-    let inventory;
-    axios.get('/api/products').then((response) => {
+    let inventory = []
+    axios.get('http://localhost:3000/api/products').then((response) => {
       inventory = response.data
       this.setState({inventory})
       console.log(inventory)
@@ -36,14 +37,14 @@ export default class CarsPage extends Component {
 
       render() {
         return (
-          <div>
-            {/* <ul>
+          <div className="contentContainer">
+            {/*<ul>
               {this.state.inventory.map((car) => {
                 return (
                   <li className='carEngine' key={car.id}>{car.engine}</li>
                 )
               })}
-            </ul> */}
+            </ul>*/}
           </div>
         );
       }
