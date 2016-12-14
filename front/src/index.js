@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, IndexRoute, Route, browserHistory} from 'react-router';
+import {Router, Route, browserHistory} from 'react-router';
 import App from './App';
 import './index.css';
 import LandingPage from './LandingPage';
@@ -13,6 +13,8 @@ import SuccessPage from './SuccessPage';
 import BatteryPage from './BatteryPage';
 import NoMatch from './NoMatch';
 import ContactPage from './ContactPage';
+
+let inventory = [];
 
 ReactDOM.render(
   <Router history={browserHistory}>
