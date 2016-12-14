@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Link} from 'react-router';
 import axios from 'axios';
@@ -17,7 +16,6 @@ class App extends Component {
   getInfo(e){
     axios.get(this.state.apiCall)
     .then((response) => {
-      console.log(response)
       })
     .catch((error) => {
       alert('Sorry! Try again later')
