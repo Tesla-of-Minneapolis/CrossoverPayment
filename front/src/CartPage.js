@@ -6,7 +6,7 @@ export default class CartPage extends Component {
   constructor(props){
     super(props);
     this.state={
-        inventory: this.props.inventory,
+        inventory: [],
         engine:'',
         exteriorColor:'',
         id: 0,
@@ -34,10 +34,7 @@ export default class CartPage extends Component {
     });
   }
 
-  getState (){
-    console.log(this.state.inventory)}
-
-  onDeleteClick(id, e) {
+  /* onDeleteClick(id, e) {
       var confirmed = confirm("Do you want to remove this from your cart?")
       if (confirmed === true){
         console.log(api()+'api/products/'+id)
@@ -59,20 +56,25 @@ export default class CartPage extends Component {
         console.log("Whew!")
       }
 
-    }
+    } */
 
       render() {
         return (
-          <div className="contentContainer"><h2>Cart</h2>
+          <div className="carsContainer"><h2>Cart</h2>
           <ul>
-              {/*{this.state.inventory.map((item, index) => {
+              {this.state.inventory.map((item, index) => {
               return (
                 <li key={item.id}>
-                      <span>{item.model}</span>
-                      <button className="deleteButton" onClick={this.props.onDeleteClick.bind(this, item.id)} key={item.id}>Remove</button>
+                      <div>
+                      {item.model}
+                      {item.engine}
+                      {item.interiorColor}
+                      {item.exteriorColor}
+                      </div>
+
                 </li>
               )
-            })}*/}
+            })}
           </ul>
           </div>
         );
