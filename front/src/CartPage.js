@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import api from './ApiCall.js';
 import axios from 'axios';
 
@@ -15,7 +16,8 @@ export default class CartPage extends Component {
         model: '',
         price: 0,
         year: 0,
-        myCart: api()+'/api/products'
+        myCart: api()+'/api/products',
+        newZIPValue: 55126
     }
   }
 
@@ -34,11 +36,11 @@ export default class CartPage extends Component {
     });
   }
 
-  /* onDeleteClick(id, e) {
+   onDeleteClick(id, e) {
       var confirmed = confirm("Do you want to remove this from your cart?")
       if (confirmed === true){
-        console.log(api()+'api/products/'+id)
-        axios.delete(api()+'api/products/'+id)
+        console.log(api()+'api/cart/'+id)
+        axios.delete(api()+'api/cart/'+id)
         .then((response) => {
           axios.get(this.state.myCart).then((response) => {
             let newInventory = response.data.slice(0);
@@ -56,26 +58,74 @@ export default class CartPage extends Component {
         console.log("Whew!")
       }
 
-    } */
+    }
+
+    onNewValue(e) {
+     this.setState({
+       newZIPValue: e.target.value
+     });
+    }
+
+    onTaskSubmit(e) {
+    e.preventDefault()
+    alert(this.state.newZIPValue)
+  }
+
+    getSubtotal() {
+      let subtotal = this.state.inventory.map((item) => {
+        return item.price
+      })
+      .reduce(function(a, b){
+        return a + b
+      }, 0)
+      return subtotal
+    }
 
       render() {
         return (
           <div className="carsContainer"><h2>Cart</h2>
           <ul>
               {this.state.inventory.map((item, index) => {
+
+
+
               return (
                 <li key={item.id}>
-                      <div>
-                      {item.model}
-                      {item.engine}
-                      {item.interiorColor}
-                      {item.exteriorColor}
-                      </div>
+                <div className="liContainerDiv">
 
+                  <div className="leftDiv">
+                    <span>{item.model}</span>
+                    <br />
+                    <img role="presentation" className="listImage" src={item.image} />
+                  </div>
+
+                  <div className="rightDiv">
+                    <div>Price (USD): {item.price}</div>
+                  </div>
+
+                  <div className="deleteDiv">
+                    <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item.id)}  key={item.id}>Remove</button>
+                  </div>
+                  </div>
                 </li>
               )
             })}
           </ul>
+          <div>
+          <form onSubmit={this.onTaskSubmit.bind(this)}>
+          <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
+          <button>Submit ZIP</button>
+          </form>
+          </div>
+          <div className="subtotalDiv">Subtotal: {this.getSubtotal()} </div>
+          <div className="toggleOnZIP">
+          <div> Tax: <br />
+                Total:
+          </div>
+          <div>
+          <Link to={"/success"}><h2>BUY NOW</h2></Link>
+          </div>
+          </div>
           </div>
         );
       }

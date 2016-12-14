@@ -15,6 +15,7 @@ import NoMatch from './NoMatch';
 import ContactPage from './ContactPage';
 
 let inventory = [];
+let zip = 00000;
 
 ReactDOM.render(
   <Router history={browserHistory}>
