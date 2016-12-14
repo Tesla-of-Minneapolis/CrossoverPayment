@@ -34,8 +34,8 @@ class App extends Component {
         <div className="navDiv">
           <ul className="nav">
             <img className="navlogo" role="presentation" src={navlogo} />
-            <li className="navItem"><Link to={'/home'}>Home</Link></li>
-            <li className="navItem"><Link to={'/cars'}>Cars</Link></li>
+            <li className="navItem"><Link to={'/home'}>Home </Link></li>
+            <li className="navItem"><Link to={'/cars'}>Store</Link></li>
             <li className="navItem"><Link to={'/cart'}>My Cart</Link></li>
             <li className="navItem"><Link to={'/contact'}>Contact</Link></li>
           </ul>

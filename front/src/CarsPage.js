@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import api from './ApiCall.js';
 import axios from 'axios';
 import getCarImages from './carimages.js'
+import {Link, browserHistory} from 'react-router';
+
 
 
 export default class CarsPage extends Component {
@@ -9,7 +11,6 @@ export default class CarsPage extends Component {
     super(props);
     this.state={
       inventory: [],
-      apiCall: api()
       // engine:'',
       // exteriorColor:'',
       // id: 0,
@@ -39,8 +40,15 @@ getInitialData() {
         console.log(error);
       });
 }
-      render() {
 
+addToCart(car, e) {
+      axios.post(api() + '/api/addProduct?id=' + car.id).then((added) => {
+      //   // tell the router to redirect to the cart page
+        browserHistory.push('/cart');
+      })
+    }
+
+      render() {
         return (
           <div className="carsContainer">
             <h5> Find the Right Fit </h5>
@@ -51,11 +59,15 @@ getInitialData() {
                   <div className="carImage">
                       <img alt='Product' src={getCarImages(car.image.split('.')[0])}/>
                   </div>
-                  <p className='model'>{'Model: ' + car.model}</p>
+                  <h4 className='model'>{car.model}</h4>
                 <div className="productInfo">
                   <p className='price'>{'Engine Size: ' + car.engine}</p>
-                  <p className='description'>{car.exteriorColor}</p>
+                  <p className='year'>{'Year: ' + car.year}</p>
+                  <p className='carColor'>{car.exteriorColor}</p>
+                  <p className='carColor'>{car.interiorColor}</p>
+                  <p className='year'>{'Est. Price: ' + '$' + car.price}</p>
                 </div>
+                <button onClick={this.addToCart.bind(this, car)}> Add to Cart </button>
               </li>
             )
           })}
