@@ -67,7 +67,7 @@
 .allCars {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;;
 }
 .allCars li {
@@ -119,6 +119,9 @@
 .carImage img {
   height: 200px;
   width: 100%;
+}
+.ion-ios-home-outline {
+  color: white;
 }
 
 
@@ -196,9 +199,10 @@
     overflow-y: scroll;
     position: absolute;
   }
+
   .allCars li {
     border: 2px solid black;
-    margin: 20px 0;
-    width: 30%;
+    margin: 20px 10px;
+    width: 30%;;
   }
 }
