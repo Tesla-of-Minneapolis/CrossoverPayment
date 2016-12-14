@@ -67,13 +67,21 @@
 .allCars {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  list-style: none;
+  justify-content: space-between;
+  list-style: none;;
 }
 .allCars li {
   border: 2px solid black;
   margin: 20px 0;
-  width: 30%;
+  width: 90%;
+}
+.productInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.productInfo p {
+  width: 50%;
 }
 
 .hasText p {
@@ -127,6 +135,11 @@
 
 .deleteDiv {
   width: 15%;
+}
+
+.carImage img {
+  height: 200px;
+  width: 100%;
 }
 
 @media (min-width: 680px) {
@@ -198,9 +211,14 @@
   }
   .carsContainer {
     display: block;
-    left: 30%;
+    left: 20%;
     margin-left: 0;
     overflow-y: scroll;
     position: absolute;
+  }
+  .allCars li {
+    border: 2px solid black;
+    margin: 20px 0;
+    width: 30%;
   }
 }
