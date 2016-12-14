@@ -14,7 +14,7 @@ OR. . .
 
 1. Clone this repository to your computer
 
-2. In the command line, navigate into CrossoverPayment. Run `java -jar CrossoverPayment`
+2. In the command line, navigate into CrossoverPayment. Run `java -jar CrossoverPayment.jar`
 
 3. In another tab in your terminal, navigate into the "front" directory within CrossoverPayment. Run `npm install`.
 
