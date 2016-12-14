@@ -31,7 +31,16 @@ export default class CartPage extends Component {
   }
       render() {
         return (
-          <div>Cart
+          <div><h2>Cart</h2>
+          <ul>
+            {this.props.items.map((item, index) => {
+              return (
+                <li key={item.id}>
+                      <span>{item.model}</span>
+                </li>
+              )
+            })}
+          </ul>
           </div>
         );
       }
