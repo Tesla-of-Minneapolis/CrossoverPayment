@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from './ApiCall.js';
 import axios from 'axios';
+import getCarImages from './carimages.js'
 
 
 export default class CarsPage extends Component {
@@ -47,16 +48,13 @@ getInitialData() {
               {this.state.inventory.map((car) => {
                 return (
                 <li className={car.model} key={car.id}>
-                  <div className="productImage">
-                      <img alt='Product' src={car.image}/>
-                </div>
-                <div className="productInfo">
-                  <p className='name'>{car.name}</p>
+                  <div className="carImage">
+                      <img alt='Product' src={getCarImages(car.image.split('.')[0])}/>
+                  </div>
                   <p className='model'>{'Model: ' + car.model}</p>
-                  <p className='price'>{'Price: ' + car.price}</p>
-                  <p className='description'>{car.description}</p>
-                  <div className='itemDetails'>
-                </div>
+                <div className="productInfo">
+                  <p className='price'>{'Engine Size: ' + car.engine}</p>
+                  <p className='description'>{car.exteriorColor}</p>
                 </div>
               </li>
             )
