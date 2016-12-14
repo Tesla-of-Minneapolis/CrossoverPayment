@@ -129,7 +129,7 @@ public class Main {
         Data to deliver: summary of: make, model, year, engine, exteriorColor, interiorColor, price with a price total
          *ALSO NEED TAX API (zip code entry from user, ENTERED INTO A TEXT FIELD)   */
         Spark.get(
-                "/api/tax",
+                "/api/cart",
                 ((request, response) -> {
 
                     String stringZipCode = request.queryParams("zipCode");
@@ -175,7 +175,7 @@ public class Main {
                     String json = serializer.include("*").serialize(listing);
                     return json;
 
-                }));//end /api/tax
+                }));//end /api/cart
 
     }//end main()
 
