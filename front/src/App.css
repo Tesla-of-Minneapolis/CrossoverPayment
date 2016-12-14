@@ -126,15 +126,15 @@
 }
 
 .leftDiv {
-  width: 45%;
-}
-
-.rightDiv {
   width: 40%;
 }
 
+.rightDiv {
+  width: 30%;
+}
+
 .deleteDiv {
-  width: 15%;
+  width: 5%;
 }
 
 .carImage img {
@@ -143,6 +143,11 @@
 }
 .ion-ios-home-outline {
   color: white;
+}
+
+.listImage {
+  height: 100px;
+  width: 100%;
 }
 
 @media (min-width: 680px) {
@@ -224,5 +229,10 @@
     border: 2px solid black;
     margin: 20px 10px;
     width: 30%;;
+  }
+
+  .listImage {
+    height: 150px;
+    width: 100%;
   }
 }
