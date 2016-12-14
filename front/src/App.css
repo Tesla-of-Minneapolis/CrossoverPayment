@@ -2,23 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.nav {
+  padding-left: 0;
 }
-
-.App-header {
-  background-color: #222;
-  color: white;
-  height: 150px;
-  padding: 20px;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-ul {
+.nav ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -43,12 +30,14 @@ ul {
 }
 
 .dealership {
+  margin-top: 40px;
   width: 100%;
 }
 
 .red {
   color: red;
   letter-spacing: 2px;
+  margin-bottom: 0;
 }
 
 .underline {
@@ -75,14 +64,63 @@ ul {
   width: 100px;
 }
 
+.allCars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+.allCars li {
+  border: 2px solid black;
+  margin: 20px 0;
+  width: 30%;
+}
+
+.hasText p {
+  font-size: 20px;
+  margin: 6% 5% 6% 5%;
+}
+.hasText2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.carlistlink {
+  color: red;
+  cursor: pointer;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  width: 200px;
+}
+.energyhome {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.energyhome p {
+  margin: 20px 40px 0 20px;
+}
+.energyhomepic {
+  width: 50%;
+}
+.navlogo {
+  display: none;
+}
 
 
-@media (min-width: 450px) {
+@media (min-width: 680px) {
+  .navlogo {
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+    width: 70%;
+  }
   .navItem {
     display: block;
     font-size: 36px;
+    margin: 20px 0;
     min-width: 50px;
-    padding: 20px 0;
   }
 
   .nav {
@@ -93,14 +131,13 @@ ul {
 
   .navDiv {
     height: 100vh;
-    padding: 1rem;
     position: fixed;
     width: 20%;
   }
 
   .contentContainer {
     display: block;
-    left: 21%;
+    left: 25%;
     margin-left: 0;
     overflow-y: scroll;
     position: absolute;
@@ -117,7 +154,7 @@ ul {
 
   .hasText p {
     font-size: 20px;
-    margin: 5%;
+    margin: 5% 2% 5% 2%;
     width: 45%;
   }
   .homeCar {
@@ -138,5 +175,12 @@ ul {
   .dealership {
     border-radius: 78px;
     width: 85%;
+  }
+  .carsContainer {
+    display: block;
+    left: 30%;
+    margin-left: 0;
+    overflow-y: scroll;
+    position: absolute;
   }
 }
