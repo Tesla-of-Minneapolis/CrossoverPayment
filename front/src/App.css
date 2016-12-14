@@ -108,6 +108,26 @@
   display: none;
 }
 
+.carsContainer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.liContainerDiv {
+  display: flex;
+}
+
+.leftDiv {
+  width: 45%;
+}
+
+.rightDiv {
+  width: 40%;
+}
+
+.deleteDiv {
+  width: 15%;
+}
 
 @media (min-width: 680px) {
   .navlogo {
