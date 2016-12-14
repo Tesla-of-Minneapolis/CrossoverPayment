@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import getCarImages from './carimages.js';
 import api from './ApiCall.js';
 import axios from 'axios';
 
@@ -116,7 +117,7 @@ export default class CartPage extends Component {
                   <div className="leftDiv">
                     <span>{item.model}</span>
                     <br />
-                    <img role="presentation" className="listImage" src={item.image} />
+                    <img role="presentation" className="listImage" src={getCarImages(item.image.split('.')[0])} />
                   </div>
 
                   <div className="rightDiv">
