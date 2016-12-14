@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+import getCarImages from './carimages.js';
 import api from './ApiCall.js';
 import axios from 'axios';
 
@@ -17,7 +18,8 @@ export default class CartPage extends Component {
         price: 0,
         year: 0,
         myCart: api()+'/api/products',
-        newZIPValue: 55126
+        newZIPValue: 0,
+        showToggleOnZip: false
     }
   }
 
@@ -81,13 +83,32 @@ export default class CartPage extends Component {
       return subtotal
     }
 
+    onToggle(e) {
+      e.preventDefault();
+      if (this.state.newZIPValue.length === 5) {
+      this.setState({
+        showToggleOnZip: true
+      })
+    } else {
+      alert("Please enter a 5-digit ZIP code")
+    }
+    }
+
       render() {
+        let toggleOnZIP =
+        <div className="toggleOnZIP">
+            <div> Tax: <br />
+                  Total:
+            </div>
+            <div>
+              <Link to={"/success"}><h2>BUY NOW</h2></Link>
+            </div>
+        </div>
+
         return (
           <div className="carsContainer"><h2>Cart</h2>
           <ul>
               {this.state.inventory.map((item, index) => {
-
-
 
               return (
                 <li key={item.id}>
@@ -96,7 +117,7 @@ export default class CartPage extends Component {
                   <div className="leftDiv">
                     <span>{item.model}</span>
                     <br />
-                    <img role="presentation" className="listImage" src={item.image} />
+                    <img role="presentation" className="listImage" src={getCarImages(item.image.split('.')[0])} />
                   </div>
 
                   <div className="rightDiv">
@@ -114,18 +135,11 @@ export default class CartPage extends Component {
           <div>
           <form onSubmit={this.onTaskSubmit.bind(this)}>
           <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
-          <button>Submit ZIP</button>
+          <button onClick={this.onToggle.bind(this)}>Submit ZIP</button>
           </form>
           </div>
           <div className="subtotalDiv">Subtotal: {this.getSubtotal()} </div>
-          <div className="toggleOnZIP">
-          <div> Tax: <br />
-                Total:
-          </div>
-          <div>
-          <Link to={"/success"}><h2>BUY NOW</h2></Link>
-          </div>
-          </div>
+          {!this.state.showToggleOnZip ? null : toggleOnZIP}
           </div>
         );
       }

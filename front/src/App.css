@@ -126,19 +126,24 @@
 }
 
 .leftDiv {
-  width: 45%;
-}
-
-.rightDiv {
   width: 40%;
 }
 
+.rightDiv {
+  width: 30%;
+}
+
 .deleteDiv {
-  width: 15%;
+  width: 5%;
 }
 
 .carImage img {
   height: 200px;
+  width: 100%;
+}
+
+.listImage {
+  height: 100px;
   width: 100%;
 }
 
@@ -220,5 +225,10 @@
     border: 2px solid black;
     margin: 20px 0;
     width: 30%;
+  }
+
+  .listImage {
+    height: 150px;
+    width: 100%;
   }
 }
