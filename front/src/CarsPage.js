@@ -11,14 +11,6 @@ export default class CarsPage extends Component {
     super(props);
     this.state={
       inventory: [],
-      // engine:'',
-      // exteriorColor:'',
-      // id: 0,
-      // image:'',
-      // interiorColor: '',
-      // model: '',
-      // price: 0,
-      // year: 0,
   }
 }
 
@@ -51,7 +43,6 @@ addToCart(car, e) {
       render() {
         return (
           <div className="carsContainer">
-            <h5> Find the Right Fit </h5>
             <ul className="allCars">
               {this.state.inventory.map((car) => {
                 return (
@@ -72,7 +63,7 @@ addToCart(car, e) {
             )
           })}
         </ul>
-          </div>
+      </div>
         );
       }
     }
