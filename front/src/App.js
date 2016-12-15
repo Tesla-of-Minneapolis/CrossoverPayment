@@ -3,7 +3,7 @@ import './App.css';
 import {Link} from 'react-router';
 import axios from 'axios';
 import api from './ApiCall.js';
-import navlogo from './Images/navlogo.jpg';
+import navlogo from './Images/teslalogo.png';
 
 
 class App extends Component {

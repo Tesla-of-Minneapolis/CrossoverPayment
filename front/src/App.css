@@ -21,6 +21,11 @@
   color: whitesmoke;
   text-decoration: none;
 }
+.navItem a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+  transition: all .7s ease 0s;
+}
 
 .navDiv {
   background-color: black;
@@ -45,15 +50,19 @@
 }
 
 .homeCar {
-  display: none;
-}
-
-.mobileCar {
+  display: block;
+  height: 300px;
   width: 100%;
 }
-
+h5 {
+  font-size: 30px;
+  margin: 20px 0;
+  padding: 0;
+}
 .carlistlink {
+  background-color: whitesmoke;
   border: 2px solid black;
+  border-radius: 5px;
   color: black;
   display: inline-block;
   font-size: 50px;
@@ -63,6 +72,23 @@
   text-decoration: none;
   width: 100px;
 }
+.carlistlink:hover {
+  background-color: black;
+  border: 2px solid black;
+  box-shadow: inset 0 0 0 2px white;
+  color: white;
+  -webkit-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transform: scale(.8);
+  transition: all .2s ease 0s;
+}
+.carlistlink:active {
+  background-color: black;
+  border: 2px solid black;
+  box-shadow: inset 0 0 0 2px white;
+  color: white;
+  transition: all .2s ease 0s;
+}
 
 .allCars {
   display: flex;
@@ -71,9 +97,16 @@
   list-style: none;;
 }
 .allCars li {
-  border: 2px solid black;
   margin: 20px 0;
-  width: 90%;
+  width: 65%;
+}
+.carImage img {
+  border-radius: 5px;
+}
+.carImage img:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .productInfo {
   display: flex;
@@ -95,7 +128,7 @@
 }
 
 .carlistlink {
-  color: red;
+  color: black;
   cursor: pointer;
   margin: 20px 0;
   padding-bottom: 10px;
@@ -104,13 +137,14 @@
 .energyhome {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .energyhome p {
   margin: 20px 40px 0 20px;
 }
 .energyhomepic {
-  width: 50%;
+  width: 100%;
 }
 .navlogo {
   display: none;
@@ -118,9 +152,13 @@
 
 .carsContainer ul {
   list-style: none;
+  margin: 0;
   padding-left: 0;
 }
-
+.carsContainer li {
+  margin-bottom: 0;
+  margin-top: 80px;
+}
 .liContainerDiv {
   display: flex;
   margin-top: 5%;
@@ -142,13 +180,18 @@
   height: 200px;
   width: 100%;
 }
-.ion-ios-home-outline {
-  color: white;
-}
+
 
 .listImage {
   height: 100px;
   width: 100%;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  left: 23%;
+  margin-left: 0;
+  overflow-y: scroll;
 }
 
 .buyDiv {
@@ -193,7 +236,7 @@
 
   .contentContainer {
     display: block;
-    left: 25%;
+    left: 20%;
     margin-left: 0;
     overflow-y: scroll;
     position: absolute;
@@ -207,30 +250,23 @@
     display: flex;
     margin-left: 3%;
   }
+  .homeCar {
+    height: 500px;
+  }
 
   .hasText p {
     font-size: 20px;
     margin: 5% 2% 5% 2%;
     width: 45%;
   }
-  .homeCar {
-    display: inline-block;
-    height: 170px;
-    width: 30%;
-  }
 
-  .mobileCar {
-    height: 170px;
-    width: 30%;
-  }
 
   .adjustMargin {
     text-align: left;
   }
 
   .dealership {
-    border-radius: 78px;
-    width: 85%;
+    width: 100%;
   }
   .carsContainer {
     display: block;
@@ -241,7 +277,6 @@
   }
 
   .allCars li {
-    border: 2px solid black;
     margin: 20px 10px;
     width: 30%;;
   }
@@ -249,5 +284,26 @@
   .listImage {
     height: 150px;
     width: 100%;
+  }
+  .contactContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    left: 23%;
+    margin-left: 0;
+    margin-top: 20px;
+    overflow-y: scroll;
+    position: absolute;
+  }
+  .contactInfo {
+    margin-bottom: 20px;
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+  }
+  .office {
+    padding: 20px 20px 20px 0;
+    text-align: left;
+    width: 30%;
   }
 }
