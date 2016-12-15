@@ -10,22 +10,32 @@ export default class CartPage extends Component {
     this.state={
         inventory: [],
         myCart: api()+'/api/cart',
+        productsCall: api()+'/api/products',
         newZIPValue: 0,
         showToggleOnZip: false,
         taxApi: api()+'/api/tax?zipCode=',
-        taxInfo: []
+        taxInfo: [],
+        id:'',
     }
   }
 
   componentDidMount () {
-    axios.get(this.state.myCart)
+    axios.get(this.state.myCart).then((responseCart) => {
+      axios.get(this.state.productsCall)
     .then((response) => {
-      var cart = (Object.assign({}, response.data))
-      console.log(response.data)
+      var cart = response.data.filter((v) => {
+        return responseCart.data[''+v.id+''] > 0
+      });
+      var quantItems = cart.map((v) => {
+        var newItem = v;
+        newItem.quantity = responseCart.data[''+v.id+'']
+        return newItem;
+      });
       this.setState({
-        inventory: []
+        inventory: quantItems
       })
     })
+  })
     .catch((error) => {
       alert(error);
       console.log(error);
