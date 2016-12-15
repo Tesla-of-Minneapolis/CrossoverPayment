@@ -15,6 +15,10 @@ export default class CartPage extends Component {
         showToggleOnZip: false,
         taxApi: api()+'/api/tax?zipCode=',
         taxInfo: [],
+        taxRate: 0,
+        subtotal: 0,
+        taxAmount: 0,
+        grandTotal: 0,
         id:'',
     }
   }
@@ -35,8 +39,16 @@ export default class CartPage extends Component {
         newItem.quantity = responseCart.data[''+v.id+'']
         return newItem;
       });
+      var itemsSubtotal = quantItems.map((item, index) => {
+              var itemSubtotal = item.price
+              return itemSubtotal;
+            });
+            var reducedSubtotal = itemsSubtotal.reduce(function(a, b) {
+              return a + b;
+            }, 0);
       this.setState({
-        inventory: quantItems
+        inventory: quantItems,
+        subtotal: reducedSubtotal
       })
     })
   })
@@ -52,7 +64,8 @@ export default class CartPage extends Component {
        axios.post(api() + '/api/removeProduct?id=' + car.id).then((deleted) => {
          browserHistory.push('/cart');
        }).then((response) => {
-         this.getMyCart()
+         this.getMyCart();
+  
        })
         .catch((error) => {
           console.log(error);
@@ -72,7 +85,6 @@ export default class CartPage extends Component {
     e.preventDefault()
 
     if (this.state.newZIPValue.length === 5) {
-      alert(this.state.newZIPValue);
       this.getTaxInfo();
       this.setState({
         showToggleOnZip: true
@@ -85,63 +97,63 @@ export default class CartPage extends Component {
   getTaxInfo() {
     axios.get(this.state.taxApi+this.state.newZIPValue)
     .then((response) => {
-      var newTaxInfo = response.data.slice(0);
+      var newTaxInfo = response.data.rates.slice(0);
       console.log(newTaxInfo)
       this.setState({
         taxInfo: newTaxInfo
       })
+      this.getTaxRate();
+      this.getTaxAmount();
+      this.getTotal();
     })
     .catch((error) => {
-      alert(error);
       console.log(error);
     });
   }
 
   getTaxRate() {
 
-    let taxRate = this.state.taxInfo.map((tax) => {
+    let newTaxRate = this.state.taxInfo.map((tax) => {
       return tax.rate
     })
     .reduce(function(a, b){
       return a + b
     }, 0)
-    return taxRate
+    console.log(newTaxRate)
+    this.setState({
+      taxRate: newTaxRate
+    })
   }
 
-    getSubtotal() {
-      let subtotal = this.state.inventory.map((item) => {
-        return item.price
-      })
-      .reduce(function(a, b){
-        return a + b
-      }, 0)
-      return subtotal
-    }
 
-    // getTaxAmount() {
-    //   let taxAmount = taxRate * subtotal * .01
-    //   return TaxAmount
-    // }
-    //
-    // getTotal() {
-    //   let total = subtotal + taxAmount
-    //   return total
-    // }
+     getTaxAmount() {
+       console.log(this.state.taxRate)
+       console.log(this.state.subtotal)
+       let taxAmount = this.state.taxRate * this.state.subtotal * .01
+       console.log(taxAmount)
+       this.setState({
+        taxAmount: taxAmount
+        })
+      }
 
-    onToggle(e) {
-
-    }
+      getTotal() {
+        let total = this.state.subtotal + this.state.taxAmount
+        this.setState({
+          grandTotal: total
+        })
+      }
 
       render() {
         let toggleOnZIP =
         <div className="toggleOnZIP">
-            <div> Tax: {}  <br />
-                  Total:
+            <div> Tax: {this.state.taxAmount}  <br />
+                  Total: {this.state.grandTotal}
             </div>
             <div className="buyDiv">
               <Link to={"/success"}><h2>BUY NOW</h2></Link>
             </div>
         </div>
+
 
         return (
           <div className="carsContainer"><h2>Cart</h2>
@@ -172,11 +184,11 @@ export default class CartPage extends Component {
           </ul>
           <div>
           <form onSubmit={this.onZIPSubmit.bind(this)}>
-          <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
-          <button onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
+            <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
+            <button onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
           </form>
           </div>
-          <div className="subtotalDiv">Subtotal: {this.getSubtotal()} </div>
+          <div className="subtotalDiv">Subtotal: {this.state.subtotal} </div>
           {!this.state.showToggleOnZip ? null : toggleOnZIP}
           </div>
         );
