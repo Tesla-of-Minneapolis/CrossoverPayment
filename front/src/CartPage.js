@@ -9,27 +9,21 @@ export default class CartPage extends Component {
     super(props);
     this.state={
         inventory: [],
-        engine:'',
-        exteriorColor:'',
-        id: 0,
-        image:'',
-        interiorColor: '',
-        model: '',
-        price: 0,
-        year: 0,
-        myCart: api()+'/api/products',
+        myCart: api()+'/api/cart',
         newZIPValue: 0,
-        showToggleOnZip: false
+        showToggleOnZip: false,
+        taxApi: api()+'/api/tax?zipCode=',
+        taxInfo: []
     }
   }
 
   componentDidMount () {
     axios.get(this.state.myCart)
     .then((response) => {
-      var newInventory = response.data.slice(0);
-      console.log(newInventory)
+      var cart = (Object.assign({}, response.data))
+      console.log(response.data)
       this.setState({
-        inventory: newInventory
+        inventory: []
       })
     })
     .catch((error) => {
@@ -73,6 +67,31 @@ export default class CartPage extends Component {
     alert(this.state.newZIPValue)
   }
 
+  getTaxInfo() {
+    axios.get(this.state.taxApi+this.state.newZIPValue)
+    .then((response) => {
+      var newTaxInfo = response.data.slice(0);
+      console.log(newTaxInfo)
+      this.setState({
+        taxInfo: newTaxInfo
+      })
+    })
+    .catch((error) => {
+      alert(error);
+      console.log(error);
+    });
+  }
+
+  getTaxRate() {
+    let taxRate = this.state.taxInfo.map((tax) => {
+      return tax.rate
+    })
+    .reduce(function(a, b){
+      return a + b
+    }, 0)
+    return taxRate
+  }
+
     getSubtotal() {
       let subtotal = this.state.inventory.map((item) => {
         return item.price
@@ -82,6 +101,16 @@ export default class CartPage extends Component {
       }, 0)
       return subtotal
     }
+
+    // getTaxAmount() {
+    //   let taxAmount = taxRate * subtotal * .01
+    //   return TaxAmount
+    // }
+    //
+    // getTotal() {
+    //   let total = subtotal + taxAmount
+    //   return total
+    // }
 
     onToggle(e) {
       e.preventDefault();
@@ -97,7 +126,7 @@ export default class CartPage extends Component {
       render() {
         let toggleOnZIP =
         <div className="toggleOnZIP">
-            <div> Tax: <br />
+            <div> Tax:  <br />
                   Total:
             </div>
             <div className="buyDiv">

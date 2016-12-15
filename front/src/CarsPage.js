@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import api from './ApiCall.js';
 import axios from 'axios';
 import getCarImages from './carimages.js'
-import {Link, browserHistory} from 'react-router';
+import {browserHistory} from 'react-router';
 
 
 

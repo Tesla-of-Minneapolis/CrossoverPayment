@@ -12,9 +12,6 @@ import SuccessPage from './SuccessPage';
 import NoMatch from './NoMatch';
 import ContactPage from './ContactPage';
 
-let inventory = [];
-let zip = 0;
-
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={LandingPage}/>
