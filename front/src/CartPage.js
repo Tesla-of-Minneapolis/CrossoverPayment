@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router';
+import {browserHistory, Link} from 'react-router';
 import getCarImages from './carimages.js';
 import api from './ApiCall.js';
 import axios from 'axios';
@@ -20,6 +20,10 @@ export default class CartPage extends Component {
   }
 
   componentDidMount () {
+    this.getMyCart()
+  }
+
+  getMyCart() {
     axios.get(this.state.myCart).then((responseCart) => {
       axios.get(this.state.productsCall)
     .then((response) => {
@@ -42,28 +46,20 @@ export default class CartPage extends Component {
     });
   }
 
-   onDeleteClick(id, e) {
-      var confirmed = confirm("Do you want to remove this from your cart?")
-      if (confirmed === true){
-        console.log(api()+'api/cart/'+id)
-        axios.delete(api()+'api/cart/'+id)
-        .then((response) => {
-          axios.get(this.state.myCart).then((response) => {
-            let newInventory = response.data.slice(0);
-            this.setState({
-              inventory: newInventory
-            })
-            console.log("You removed the item")
-          })
-        })
+   onDeleteClick(car, e) {
+     var confirmed = confirm("Do you want to remove this from your cart?")
+     if (confirmed === true){
+       axios.post(api() + '/api/removeProduct?id=' + car.id).then((deleted) => {
+         browserHistory.push('/cart');
+       }).then((response) => {
+         this.getMyCart()
+       })
         .catch((error) => {
           console.log(error);
-          alert(error);
         })
       } else {
         console.log("Whew!")
       }
-
     }
 
     onNewValue(e) {
@@ -164,7 +160,7 @@ export default class CartPage extends Component {
                   </div>
 
                   <div className="deleteDiv">
-                    <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item.id)}  key={item.id}>Remove</button>
+                    <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item)}  key={item.id}>Remove</button>
                   </div>
                   </div>
                 </li>
