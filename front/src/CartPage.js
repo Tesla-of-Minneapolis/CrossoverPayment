@@ -68,9 +68,18 @@ export default class CartPage extends Component {
      });
     }
 
-    onTaskSubmit(e) {
+  onZIPSubmit(e) {
     e.preventDefault()
-    alert(this.state.newZIPValue)
+
+    if (this.state.newZIPValue.length === 5) {
+      alert(this.state.newZIPValue);
+      this.getTaxInfo();
+      this.setState({
+        showToggleOnZip: true
+      })
+    } else {
+      alert("Please enter a 5-digit ZIP code")
+    }
   }
 
   getTaxInfo() {
@@ -89,6 +98,7 @@ export default class CartPage extends Component {
   }
 
   getTaxRate() {
+
     let taxRate = this.state.taxInfo.map((tax) => {
       return tax.rate
     })
@@ -119,20 +129,13 @@ export default class CartPage extends Component {
     // }
 
     onToggle(e) {
-      e.preventDefault();
-      if (this.state.newZIPValue.length === 5) {
-      this.setState({
-        showToggleOnZip: true
-      })
-    } else {
-      alert("Please enter a 5-digit ZIP code")
-    }
+
     }
 
       render() {
         let toggleOnZIP =
         <div className="toggleOnZIP">
-            <div> Tax:  <br />
+            <div> Tax: {}  <br />
                   Total:
             </div>
             <div className="buyDiv">
@@ -168,9 +171,9 @@ export default class CartPage extends Component {
             })}
           </ul>
           <div>
-          <form onSubmit={this.onTaskSubmit.bind(this)}>
+          <form onSubmit={this.onZIPSubmit.bind(this)}>
           <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
-          <button onClick={this.onToggle.bind(this)}>Submit ZIP</button>
+          <button onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
           </form>
           </div>
           <div className="subtotalDiv">Subtotal: {this.getSubtotal()} </div>
