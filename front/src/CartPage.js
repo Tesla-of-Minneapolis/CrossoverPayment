@@ -128,6 +128,32 @@ export default class CartPage extends Component {
       alert("Please enter a 5-digit ZIP code")
     }
     }
+    quantChange(result, e){
+      e.preventDefault();
+      axios.post(api() + '/adjustQuantity?itemId=' + result.id + 'adjustQuantity=' + (result.quantity))
+      .then((response) => {
+        this.getMyCart();
+        axios.get(api() + '/tax?zipCode=' + this.state.newZIPValue)
+        .then((response) => {
+        console.log(response.data.totalRate);
+        let newTaxRate = response.data.totalRate/100;
+        let taxAmount = Math.round10(newTaxRate * this.state.subtotal, -2);
+        let newTotal = taxAmount + this.state.subtotal
+        this.setState({
+          isFormShown: !this.state.isFormShown,
+          taxRate: newTaxRate,
+          tax: taxAmount,
+          total: newTotal
+        })
+        console.log(this.state.taxRate);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+    }).catch((err) => {
+      console.error(err);
+    })
+  }
 
       render() {
         let toggleOnZIP =
@@ -158,7 +184,13 @@ export default class CartPage extends Component {
                   <div className="rightDiv">
                     <div>Price (USD): {item.price}</div>
                   </div>
+                  {/* <form>
+                    <input placeholder="1"
+                    // onChange={this.quantChange.bind(this)}
+                    >
 
+                    </input>
+                  </form> */}
                   <div className="deleteDiv">
                     <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item)}  key={item.id}>Remove</button>
                   </div>
@@ -167,6 +199,7 @@ export default class CartPage extends Component {
               )
             })}
           </ul>
+            <Link className="continueShopping" to={"/cars"}> Continue Shopping</Link>
           <div>
           <form onSubmit={this.onTaskSubmit.bind(this)}>
           <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />

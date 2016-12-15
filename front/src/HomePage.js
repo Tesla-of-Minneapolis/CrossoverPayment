@@ -12,13 +12,13 @@ export default class HomePage extends Component {
             <div>
             <img className="homeCar" role="presentation" src={car1} />
             <div className="hasText2">
-              <h2 className="red adjustMargin"> Beauty.</h2>
-              <h2 className="red adjustMargin"> Power.</h2>
-              <h2 className="red adjustMargin"> Sustainability.</h2>
+              <h2 className="red adjustMargin"> Beauty</h2>
+              <h2 className="red adjustMargin"> Sustainability </h2>
+              <h2 className="red adjustMargin"> Power </h2>
             </div>
             <h5> The perfect gift for the holidays.</h5>
             </div>
-            <Link className="carlistlink" to={"/cars"}> Store <i className="ion-model-s"></i> </Link>
+            <Link className="carlistlink" to={"/cars"}> Store</Link>
 
             <div className="energyhome">
               <img className="energyhomepic" role="presentation" src={powerwall} />
