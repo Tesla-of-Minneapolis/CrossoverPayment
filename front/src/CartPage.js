@@ -40,7 +40,7 @@ export default class CartPage extends Component {
         return newItem;
       });
       var itemsSubtotal = quantItems.map((item, index) => {
-              var itemSubtotal = item.price
+              var itemSubtotal = item.price * item.quantity
               return itemSubtotal;
             });
             var reducedSubtotal = itemsSubtotal.reduce(function(a, b) {
@@ -109,7 +109,7 @@ export default class CartPage extends Component {
       this.getTotal();
     })
     .catch((error) => {
-      console.log(error);
+      alert("Please check to make sure your ZIP code is valid");
     });
   }
 
@@ -145,6 +145,12 @@ export default class CartPage extends Component {
         })
       }
 
+      quantChange(result, e) {
+        e.preventDefault();
+        console.log(e.target.value)
+        axios.post(api() + '/api/adjustQuantity?id=' + result.id + '&adjustQuantity=' + e.target.value)
+      }
+
       render() {
         let toggleOnZIP =
         <div className="toggleOnZIP">
@@ -174,8 +180,19 @@ export default class CartPage extends Component {
 
                   <div className="rightDiv">
                     <div>Price (USD): {item.price}</div>
-                  </div>
+                    <div>
+                    <form>
+                     <input
+                     placeholder={item.quantity}
+                      onChange={this.quantChange.bind(this, item)}
+                     >
 
+                     </input>
+                     <br />
+                     <button> Change Quantity</button>
+                   </form>
+                   </div>
+                  </div>
                   <div className="deleteDiv">
                     <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item)}  key={item.id}>Remove</button>
                   </div>
