@@ -65,7 +65,9 @@ export default class CartPage extends Component {
          browserHistory.push('/cart');
        }).then((response) => {
          this.getMyCart();
-  
+         if (this.state.showToggleOnZip == true) {
+           this.getTaxInfo();
+         }
        })
         .catch((error) => {
           console.log(error);
