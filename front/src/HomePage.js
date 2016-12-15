@@ -14,7 +14,7 @@ export default class HomePage extends Component {
             <div className="hasText2">
               <h2 className="red adjustMargin"> Beauty.</h2>
               <h2 className="red adjustMargin"> Power.</h2>
-              <h2 className="red adjustMargin"> Sustainable.</h2>
+              <h2 className="red adjustMargin"> Sustainability.</h2>
             </div>
             <h5> The perfect gift for the holidays.</h5>
             </div>
