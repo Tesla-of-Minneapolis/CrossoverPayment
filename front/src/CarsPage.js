@@ -35,7 +35,7 @@ getInitialData() {
 
 addToCart(car, e) {
       axios.post(api() + '/api/addProduct?id=' + car.id).then((added) => {
-      //   // tell the router to redirect to the cart page
+      // tell the router to redirect to the cart page
         browserHistory.push('/cart');
       })
     }

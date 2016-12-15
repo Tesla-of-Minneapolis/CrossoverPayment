@@ -127,7 +127,6 @@ export default class CartPage extends Component {
     })
   }
 
-
      getTaxAmount() {
        console.log(this.state.taxRate)
        console.log(this.state.subtotal)
@@ -201,6 +200,7 @@ export default class CartPage extends Component {
               )
             })}
           </ul>
+            <Link className="continueShopping" to={"/cars"}> Continue Shopping</Link>
           <div>
           <form onSubmit={this.onZIPSubmit.bind(this)}>
             <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />

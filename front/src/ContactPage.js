@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import contactPic from './Images/contactimage.jpg'
 
 export default class ContactPage extends Component {
       render() {
@@ -43,6 +44,7 @@ export default class ContactPage extends Component {
               <p>3500 Deer Creek Road</p>
               <p>Palo Alto, CA 94304</p>
             </div>
+            <img className="contactImage" role="presentation" src={contactPic} />
           </div>
         </div>
         );
