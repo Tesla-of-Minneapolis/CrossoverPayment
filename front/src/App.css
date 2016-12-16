@@ -1,4 +1,14 @@
-
+@font-face {
+  font-family: 'Trench';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./trench/Trench-Thin.eot');
+  src: url('./trench/Trench-Thin.eot?#iefix') format('embedded-opentype'),
+  url('./trench/Trench-Thin.woff2') format('woff2'),
+  url('./trench/Trench-Thin.woff') format('woff'),
+  url('./trench/Trench-Thin.ttf') format('truetype'),
+  url('./trench/Trench-Thin.svg#Trench-Thin') format('svg');
+}
 
 .App {
   text-align: center;
@@ -43,6 +53,7 @@
 
 .red {
   color: red;
+  font-family: 'Trench';
   letter-spacing: 2px;
   margin-bottom: 0;
 }
@@ -72,7 +83,7 @@ h5 {
   margin: 20px auto 20px auto;
   text-align: center;
   text-decoration: none;
-  width: 200px;
+  width: 300px;
 }
 .carlistlink:hover {
   background-color: black;
@@ -221,14 +232,41 @@ h5 {
   margin: 20px auto 0 auto;
   width: 100px;
 }
+
 .deleteButton:hover {
   background-color: red;
 }
+
 .deleteButton:active {
   background-color: red;
 }
+
+.quantButton {
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 30px;
+  margin: 20px auto 0 auto;
+  width: 200px;
+}
+.zipCode {
+  background-color: lightgrey;
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.quantButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.quantButton:active {
+  background-color: black;
+}
+
 .quantInput {
   background-color: lightgrey;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -238,7 +276,7 @@ h5 {
 }
 
 .listImage {
-  height: 100px;
+  height: 150px;
   width: 100%;
 }
 .contactContainer {
@@ -279,6 +317,15 @@ h5 {
 .successContainer {
   margin-top: 80px;
   position: absolute;
+}
+.grandTotal {
+  border-top: 1px solid black;
+}
+.newsletter {
+  height: 25px;
+  margin: 10px;
+  text-align: center;
+  width: 300px;
 }
 @media (min-width: 680px) {
   .navlogo {

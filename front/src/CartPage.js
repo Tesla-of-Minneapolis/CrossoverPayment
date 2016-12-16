@@ -154,10 +154,10 @@ export default class CartPage extends Component {
         let toggleOnZIP =
         <div className="toggleOnZIP">
             <div> Tax: {'$' + this.state.taxAmount}  <br /><br/>
-                  Total: {'$' + this.state.grandTotal}
+                  <div className="grandTotal">Total: {'$' + this.state.grandTotal}</div>
             </div>
             <div className="buyDiv">
-              <Link to={"/success"}><h2>BUY NOW</h2></Link>
+              <Link className="carlistlink" to={"/success"}> Buy Now! </Link>
             </div>
         </div>
 
@@ -190,7 +190,7 @@ export default class CartPage extends Component {
 
                        </input>
                        <br />
-                       <button> Change Quantity</button>
+                       <button className="quantButton"> Change Quantity</button>
                      </form>
                      </div>
                     </div>
@@ -208,7 +208,7 @@ export default class CartPage extends Component {
           <p>Enter zip code to receive your total cost.</p>
           <form onSubmit={this.onZIPSubmit.bind(this)}>
             <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
-            <button onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
+            <button className="quantButton" onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
           </form>
           </div>
           <div className="subtotalDiv">Subtotal: {'$' + this.state.subtotal} </div>

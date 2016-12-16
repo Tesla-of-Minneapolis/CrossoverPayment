@@ -8,14 +8,14 @@ export default class SuccessPage extends Component {
             <div className="success">
               <img src={check}></img>
               <h2>Thank you for for purchase!</h2>
-              <h3>You will receive and email in regards to when your new purchase will be shipped.</h3>
+              <h3>You will receive an email in regards to when your new purchase will be shipped.</h3>
             </div>
-            <div className="newsletter">
+            <div className="newsletterInfo">
               <h2>Our Newsletter</h2>
               <h3> Sign up here to recieve our lastest announcements and news about upcoming models.</h3>
-              <input placeholder='Name'></input><br/>
-              <input placeholder='Email'></input><br/>
-              <button>Sign Up Now</button>
+              <input className="newsletter" placeholder='Name'></input><br/>
+              <input className="newsletter" placeholder='Email'></input><br/>
+              <button className="quantButton">Sign Up Now</button>
 
             </div>
           </div>

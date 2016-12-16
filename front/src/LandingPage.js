@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
           <div className="container">
             <div className="landing">
               {/* <img className="teslaname" role="presentation" src={logo} /> */}
-              <h1> Tesla </h1>
+              <h1 className="tesla"> Tesla </h1>
               <img className="teslalogo" role="presentation" src={logo2} />
               <h1> Minneapolis </h1>
             </div>

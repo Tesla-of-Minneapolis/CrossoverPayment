@@ -19,7 +19,6 @@ export default class HomePage extends Component {
             <h5> The perfect gift for the holidays.</h5>
             </div>
             <Link className="carlistlink" to={"/cars"}> Store</Link>
-
             <div className="energyhome">
               <img className="energyhomepic" role="presentation" src={powerwall} />
               <div className='energydescription'>
