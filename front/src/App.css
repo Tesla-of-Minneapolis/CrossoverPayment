@@ -1,7 +1,8 @@
+
+
 .App {
   text-align: center;
 }
-
 .nav {
   padding-left: 0;
 }
@@ -32,6 +33,7 @@
   justify-content: center;
   position: fixed;
   width: 100%;
+  z-index: 300;
 }
 
 .dealership {
@@ -132,12 +134,15 @@ h5 {
   transform: scale(1.2);
 }
 .productInfo {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .productInfo p {
-  width: 50%;
+  padding: 0 10px;
+  width: 60%;
 }
 
 .hasText p {
@@ -150,8 +155,6 @@ h5 {
   font-size: 12px;
   justify-content: space-around;
 }
-
-
 
 .energyhome {
   align-items: center;
@@ -168,38 +171,71 @@ h5 {
 .navlogo {
   display: none;
 }
+.carsContainer {
+  height: 100vh;
+  margin-top: 70px;
+  position: absolute;
+}
 
 .carsContainer ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
+.carsContainer h2 {
+  margin-top: 0;
+}
+
 .carsContainer li {
   margin-bottom: 0;
-  margin-top: 80px;
 }
 .liContainerDiv {
   display: flex;
-  margin-top: 5%;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2%;
+  text-align: center;
 }
-
+.carsButton {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.carsButton:hover {
+  background-color: white;
+  color: black;
+}
 .leftDiv {
-  width: 40%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .rightDiv {
+  margin: 20px auto;
   width: 30%;
 }
 
-.deleteDiv {
-  width: 5%;
+.deleteButton {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 20px auto 0 auto;
+  width: 100px;
+}
+.deleteButton:hover {
+  background-color: red;
+}
+.deleteButton:active {
+  background-color: red;
+}
+.quantInput {
+  background-color: lightgrey;
+  text-align: center;
 }
 
 .carImage img {
   height: 200px;
   width: 100%;
 }
-
 
 .listImage {
   height: 100px;
@@ -227,7 +263,23 @@ h5 {
   max-height: 500px;
   width: 100%;
 }
-
+.headshot {
+  width: 70%;
+}
+.contactInfo h2 {
+  text-align: center;
+}
+.subtotalDiv {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.toggleOnZIP {
+  font-size: 30px;
+}
+.successContainer {
+  margin-top: 80px;
+  position: absolute;
+}
 @media (min-width: 680px) {
   .navlogo {
     display: block;
@@ -277,7 +329,7 @@ h5 {
 
   .hasText p {
     font-size: 20px;
-    margin: 5% 2% 5% 2%;
+    margin: 2% 2% 5% 2%;
     width: 45%;
   }
 
@@ -295,6 +347,7 @@ h5 {
     display: block;
     left: 20%;
     margin-left: 0;
+    margin-top: 10px;
     overflow-y: scroll;
     position: absolute;
   }
@@ -305,7 +358,7 @@ h5 {
   }
 
   .listImage {
-    height: 150px;
+    height: 200px;
     width: 100%;
   }
   .contactContainer {
@@ -328,5 +381,60 @@ h5 {
     padding: 20px 20px 20px 0;
     text-align: left;
     width: 30%;
+  }
+  .buyDiv a {
+    color: red;
+    text-decoration: none;
+  }
+
+  .buyDiv h2 {
+    border: 2px solid black;
+    padding: 5px;
+  }
+  .carsContainer li {
+    margin-bottom: 0;
+  }
+  .carsButton {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .carsButton:hover {
+    background-color: white;
+    color: black;
+  }
+  .leftDiv {
+    width: 40%;
+  }
+  .leftDiv img {
+    border-radius: 3px;
+    height: 200px;
+  }
+  .rightDiv {
+    width: 60%;
+  }
+
+  .liContainerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    text-align: center;
+  }
+  span {
+    font-size: 30px;
+  }
+  .successContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    justify-content: center;
+    left: 20%;
+    margin-top: 10px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 80%;
   }
 }

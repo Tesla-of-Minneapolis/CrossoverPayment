@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import contactPic from './Images/contactimage.jpg'
+import contactPic from './Images/contactimage.jpg';
+import danny from './headshots/danny.jpg';
+import gilbert from './headshots/gilbert.jpg';
+import ryan from './headshots/ryan.jpg';
+import sarahrose from './headshots/sarahrose.jpg';
+import logan from './headshots/logan.jpg';
+
+
 
 export default class ContactPage extends Component {
       render() {
@@ -7,42 +14,42 @@ export default class ContactPage extends Component {
           <div>
             <div className="contactContainer">
               <div className="contactInfo">
-              <h2>Contact</h2>
-              <h3>Sales</h3>
-              <p>Toll free: (888) 51-TESLA or (888) 518-3752</p>
-              <p>Local: (650) 681-5100</p>
-              <p>Fax: (650) 681-5101</p>
-              <a href="mailto:NASales@tesla.com">Email North America Sales</a>
+              <h2>Discover our team</h2>
             </div>
             <div className="office">
-              <h3>Tesla Headquarters</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
+              <h3>Danny Locke</h3>
+              <img className="headshot" src={danny}></img>
+              <p>Future Back End Developer</p>
+              <a href="https://github.com/DannyLocke">GitHub</a><br/>
+              <a href="https://www.linkedin.com/in/dannylocke">LinkedIn</a>
             </div>
             <div className="office">
-              <h3>Tesla Factory</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
+              <h3>Gilbert Akpan</h3>
+              <img className="headshot" src={gilbert}></img>
+              <p>Future Back End Developer</p>
+              <a href="https://github.com/gilbertojnr">GitHub</a><br/>
+              <a href="https://www.linkedin.com/in/gilbert-akpan-a672b7115">LinkedIn</a>
             </div>
             <div className="office">
-              <h3>Tesla Gigafactory</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
+              <h3>Ryan Kielty</h3>
+              <img className="headshot" src={ryan}></img>
+              <p>Future Back End Developer</p>
+              <a href="https://github.com/ryankielty">GitHub</a><br/>
+              <a href="https://www.linkedin.com/in/rpkielty">LinkedIn</a>
             </div>
             <div className="office">
-              <h3>Tesla Amsterdam Zuid Oost</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
+              <h3>Sarah Rose Battles</h3>
+              <img className="headshot" src={sarahrose}></img>
+              <p>Future Front End Developer</p>
+              <a href="https://github.com/srosebattles">GitHub</a><br/>
+              <a href="https://www.linkedin.com/in/sarah-rose-battles-b9333773">LinkedIn</a>
             </div>
             <div className="office">
-              <h3>Tesla Tilburg Factory and Delivery Center</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
-            </div>
-            <div className="office">
-              <h3>Tesla Australia and Asia</h3>
-              <p>3500 Deer Creek Road</p>
-              <p>Palo Alto, CA 94304</p>
+              <h3>Logan Hussung</h3>
+              <img className="headshot" src={logan}></img>
+              <p>Future Java Developer</p>
+              <a href="https://github.com/LoganHussung">GitHub</a><br/>
+              <a href="https://www.linkedin.com/in/logan-hussung">LinkedIn</a>
             </div>
             <img className="contactImage" role="presentation" src={contactPic} />
           </div>

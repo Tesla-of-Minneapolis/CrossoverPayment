@@ -54,11 +54,11 @@ addToCart(car, e) {
                 <div className="productInfo">
                   <p className='price'>{'Engine Size: ' + car.engine}</p>
                   <p className='year'>{'Year: ' + car.year}</p>
-                  <p className='carColor'>{car.exteriorColor}</p>
-                  <p className='carColor'>{car.interiorColor}</p>
+                  <p className='carColor'>Color:{' ' + car.exteriorColor}</p>
+                  <p className='carColor'>Interior Color:{' ' + car.interiorColor}</p>
                   <p className='year'>{'Est. Price: ' + '$' + car.price}</p>
                 </div>
-                <button onClick={this.addToCart.bind(this, car)}> Add to Cart </button>
+                <button className="carsButton" onClick={this.addToCart.bind(this, car)}> Add to Cart </button>
               </li>
             )
           })}

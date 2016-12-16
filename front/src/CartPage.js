@@ -153,8 +153,8 @@ export default class CartPage extends Component {
       render() {
         let toggleOnZIP =
         <div className="toggleOnZIP">
-            <div> Tax: {this.state.taxAmount}  <br />
-                  Total: {this.state.grandTotal}
+            <div> Tax: {'$' + this.state.taxAmount}  <br /><br/>
+                  Total: {'$' + this.state.grandTotal}
             </div>
             <div className="buyDiv">
               <Link to={"/success"}><h2>BUY NOW</h2></Link>
@@ -163,51 +163,55 @@ export default class CartPage extends Component {
 
 
         return (
-          <div className="carsContainer"><h2>Cart</h2>
+          <div className="carsContainer"><h2>My Cart</h2>
           <ul>
               {this.state.inventory.map((item, index) => {
 
               return (
                 <li key={item.id}>
                 <div className="liContainerDiv">
+                  <div className="singleCarCart">
 
-                  <div className="leftDiv">
-                    <span>{item.model}</span>
-                    <br />
-                    <img role="presentation" className="listImage" src={getCarImages(item.image.split('.')[0])} />
-                  </div>
+                    <div className="leftDiv">
+                      <img role="presentation" className="listImage" src={getCarImages(item.image.split('.')[0])} />
+                      <br />
+                      <span>{item.model}</span>
+                    </div>
 
-                  <div className="rightDiv">
-                    <div>Price (USD): {item.price}</div>
-                    <div>
-                    <form>
-                     <input
-                     placeholder={item.quantity}
-                      onChange={this.quantChange.bind(this, item)}
-                     >
+                    <div className="rightDiv">
+                      <div>Price per car (USD): {item.price}</div>
+                      <div>
+                      <form>
+                       <input
+                        className='quantInput'
+                        placeholder={item.quantity}
+                        onChange={this.quantChange.bind(this, item)}
+                       >
 
-                     </input>
-                     <br />
-                     <button> Change Quantity</button>
-                   </form>
-                   </div>
+                       </input>
+                       <br />
+                       <button> Change Quantity</button>
+                     </form>
+                     </div>
+                    </div>
+                    <div className="deleteDiv">
+                      <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item)}  key={item.id}>Remove</button>
+                    </div>
                   </div>
-                  <div className="deleteDiv">
-                    <button className="deleteButton" onClick={this.onDeleteClick.bind(this, item)}  key={item.id}>Remove</button>
-                  </div>
-                  </div>
+                </div>
                 </li>
               )
             })}
           </ul>
             <Link className="continueShopping" to={"/cars"}> Continue Shopping</Link>
           <div>
+          <p>Enter zip code to receive your total cost.</p>
           <form onSubmit={this.onZIPSubmit.bind(this)}>
             <input className="zipCode" type="text" placeholder="ZIP code" value={this.state.newZIPValue} onChange={this.onNewValue.bind(this)} />
             <button onClick={this.onZIPSubmit.bind(this)}>Submit ZIP</button>
           </form>
           </div>
-          <div className="subtotalDiv">Subtotal: {this.state.subtotal} </div>
+          <div className="subtotalDiv">Subtotal: {'$' + this.state.subtotal} </div>
           {!this.state.showToggleOnZip ? null : toggleOnZIP}
           </div>
         );
