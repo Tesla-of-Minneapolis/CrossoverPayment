@@ -63,6 +63,6 @@ if (confirmed === true){
 
       if (this.state.showToggleOnZip == true) {
         this.getTaxInfo();
-    }
+      }
 
 */}
