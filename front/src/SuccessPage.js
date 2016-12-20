@@ -7,8 +7,8 @@ export default class SuccessPage extends Component {
           <div className="successContainer">
             <div className="success">
               <img src={check}></img>
-              <h2>Thank you for for purchase!</h2>
-              <h3>You will receive an email in regards to when your new purchase will be shipped.</h3>
+              <h2>Thank you for your purchase!</h2>
+              <h3>You will receive a confirmation email with shipping information.</h3>
             </div>
             <div className="newsletterInfo">
               <h2>Our Newsletter</h2>

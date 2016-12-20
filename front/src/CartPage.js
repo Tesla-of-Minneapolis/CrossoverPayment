@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {browserHistory, Link} from 'react-router';
 import getCarImages from './carimages.js';
+
 import api from './ApiCall.js';
 import axios from 'axios';
+
 
 export default class CartPage extends Component {
   constructor(props){
@@ -109,7 +111,7 @@ export default class CartPage extends Component {
       this.getTotal();
     })
     .catch((error) => {
-      alert("Please check to make sure your ZIP code is valid");
+      alert("Please check to make sure your ZIP code is valid, and that you are connected to the Internet");
     });
   }
 
@@ -130,7 +132,9 @@ export default class CartPage extends Component {
      getTaxAmount() {
        console.log(this.state.taxRate)
        console.log(this.state.subtotal)
-       let taxAmount = this.state.taxRate * this.state.subtotal * .01
+       let modTaxRate = this.state.taxRate * .01
+       let baseTax = modTaxRate * this.state.subtotal
+       let taxAmount = Math.round(baseTax)
        console.log(taxAmount)
        this.setState({
         taxAmount: taxAmount
@@ -180,7 +184,7 @@ export default class CartPage extends Component {
 
                     <div className="rightDiv">
                       <div>Price per car (USD): {item.price}</div>
-                      <div>
+                      <div className="formDiv">
                       <form>
                        <input
                         className='quantInput'
