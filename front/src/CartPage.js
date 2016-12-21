@@ -22,6 +22,7 @@ export default class CartPage extends Component {
         taxAmount: 0,
         grandTotal: 0,
         id:'',
+        newQuant: 1
     }
   }
 
@@ -148,10 +149,15 @@ export default class CartPage extends Component {
         })
       }
 
-      quantChange(result, e) {
+      quantChange(e) {
+        this.setState({
+          newQuant: e.target.value
+        })
+      }
+
+      quantSubmit(result, e) {
         e.preventDefault();
-        console.log(e.target.value)
-        axios.post(api() + '/api/adjustQuantity?id=' + result.id + '&adjustQuantity=' + e.target.value)
+        axios.post(api() + '/api/adjustQuantity?id=' + result.id + '&adjustQuantity=' + this.state.newQuant).then((response) => {this.getMyCart()})
       }
 
       render() {
@@ -185,17 +191,18 @@ export default class CartPage extends Component {
                     <div className="rightDiv">
                       <div>Price per car (USD): {item.price}</div>
                       <div className="formDiv">
-                      <form>
+                      <form onSubmit={this.quantSubmit.bind(this, item)}>
                        <input
                         className='quantInput'
                         placeholder={item.quantity}
-                        onChange={this.quantChange.bind(this, item)}
+                        onChange={this.quantChange.bind(this)}
                        >
 
                        </input>
                        <br />
                        <button className="quantButton">Change Quantity</button>
                      </form>
+
                      </div>
                     </div>
                     <div className="deleteDiv">
