@@ -53,9 +53,9 @@ addToCart(car, e) {
                   <h4 className='model'>{car.model}</h4>
                 <div className="productInfo">
                   <p className='price'>{'Engine Size: ' + car.engine}</p>
-                  <p className='year'>{'Year: ' + car.year}</p>
+                  {car.year !== 0 ? <p className='year'>{'Year: ' + car.year}</p>:null}
                   <p className='carColor'>Color:{' ' + car.exteriorColor}</p>
-                  <p className='carColor'>Interior Color:{' ' + car.interiorColor}</p>
+                  {car.interiorColor !=="null" ? <p className='carColor'>Interior Color:{' ' + car.interiorColor}</p>:null}
                   <p className='year'>{'Est. Price: ' + '$' + car.price}</p>
                 </div>
                 <button className="carsButton" onClick={this.addToCart.bind(this, car)}> Add to Cart </button>
