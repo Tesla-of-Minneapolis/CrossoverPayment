@@ -194,7 +194,7 @@ export default class CartPage extends Component {
 
                        </input>
                        <br />
-                       <button className="quantButton"> Change Quantity</button>
+                       <button className="quantButton">Change Quantity</button>
                      </form>
                      </div>
                     </div>

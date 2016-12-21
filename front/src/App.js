@@ -7,25 +7,6 @@ import navlogo from './Images/teslalogo.png';
 
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      apiCall: api(),
-    }
-  }
-
-  getInfo(e){
-    axios.get(this.state.apiCall)
-    .then((response) => {
-      })
-    .catch((error) => {
-      alert('Sorry! Try again later')
-    });
-  }
-
-  componentDidMount() {
-    this.getInfo()
-  }
 
   render() {
     return (
