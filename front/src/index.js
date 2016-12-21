@@ -16,12 +16,12 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={LandingPage}/>
     <Route path="/" component={App} >,
-      <Route path="/home" component={HomePage}/>
-      <Route path="/cars" component={CarsPage}/>
-      <Route path="/car" component={SingleCar}/>
-      <Route path="/cart" component={CartPage}/>
-      <Route path="/success" component={SuccessPage}/>
-      <Route path="/contact" component={ContactPage}/>
+      <Route path="home" component={HomePage}/>
+      <Route path="cars" component={CarsPage}/>
+      <Route path="car" component={SingleCar}/>
+      <Route path="cart" component={CartPage}/>
+      <Route path="success" component={SuccessPage}/>
+      <Route path="contact" component={ContactPage}/>
 
       <Route path="*" component={NoMatch} />
     </Route>
