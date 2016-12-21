@@ -189,7 +189,7 @@ export default class CartPage extends Component {
                     </div>
 
                     <div className="rightDiv">
-                      <div>Price per car (USD): {item.price}</div>
+                      <div>Price (USD): {item.price}</div>
                       <div className="formDiv">
                       <form onSubmit={this.quantSubmit.bind(this, item)}>
                        <input
