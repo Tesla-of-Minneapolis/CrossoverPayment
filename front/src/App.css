@@ -186,6 +186,7 @@ h5 {
   height: 100vh;
   margin-top: 70px;
   position: absolute;
+  min-width: 75%;
 }
 
 .carsContainer ul {
@@ -344,7 +345,10 @@ h5 {
     width: 100%;
   }
 }
+
+
 @media (min-width: 680px) {
+
   .navlogo {
     display: block;
     height: 200px;
