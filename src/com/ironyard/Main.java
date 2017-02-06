@@ -16,6 +16,9 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
+
     //to store cart data
     public static HashMap<Integer, Integer> cartHashMap = new HashMap<>();
     //to store site inventory
@@ -38,6 +41,10 @@ public class Main {
 
             productList.add(tesla);
         }//end while loop to parse raw data
+
+        Spark.port(getHerokuAssignedPort());
+
+        Spark.staticFileLocation("/public");
 
         Spark.init();
 
@@ -176,5 +183,13 @@ public class Main {
                 }));//end /api/tax
 
     }//end main()
+
+    private static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
 
 }//end class Main
