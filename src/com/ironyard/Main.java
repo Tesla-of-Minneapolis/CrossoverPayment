@@ -16,9 +16,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
-
-
     //to store cart data
     public static HashMap<Integer, Integer> cartHashMap = new HashMap<>();
     //to store site inventory
@@ -27,8 +24,8 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         //parse csv into an arraylist
-        File f = new File ("RawCarData.csv");
-        Scanner csvRead = new Scanner (f);
+        //File f = new File ("RawCarData.csv");
+        Scanner csvRead = new Scanner (Main.class.getResourceAsStream("/RawCarData.csv"));
 
         while (csvRead.hasNext()){
             String teslaFile = csvRead.nextLine();
